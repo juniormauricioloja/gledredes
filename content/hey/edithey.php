@@ -73,16 +73,30 @@ $id = $_POST["id"];
                                     <div class="form-row mb-3">
                                         <div class="col">
                                             <label for="" class="form-control-label">Año:</label>
-                                            <input id="year" type="text" class="form-control from-control-lg" value="<?php echo $rol["year"]; ?> ">
+                                            <input id="year" type="text" class="form-control from-control-lg input-number" value="<?php echo $rol["year"]; ?> ">
 
                                         </div>
                                         <div class="col">
                                             <label for="" class="form-control-label">Mes:</label>
-                                            <input id="mes" type="text" class="form-control from-control-lg" value="<?php echo $rol["mes"]; ?> ">
+                                            <select name="" id="mes" class="form-control from-control-lg">
+                                                <option selected value="<?php echo $rol["mes"]; ?> "><?php echo $rol["mes"]; ?></option>
+                                                <option value="Enero">Enero</option>
+                                                <option value="Febrero">Febrero</option>
+                                                <option value="Marzo">Marzo</option>
+                                                <option value="Abril">Abril</option>
+                                                <option value="Mayo">Mayo</option>
+                                                <option value="Junio">Junio</option>
+                                                <option value="Julio">Julio</option>
+                                                <option value="Agosto">Agosto</option>
+                                                <option value="Septiembre">Septiembre</option>
+                                                <option value="Octubre">Octubre</option>
+                                                <option value="Noviembre">Noviembre</option>
+                                                <option value="Diciembre">Diciembre</option>
+                                            </select>   
                                         </div>
                                         <div class="col">
                                             <label for="" class="form-control-label">Semana:</label>
-                                            <input id="semana" type="text" class="form-control from-control-lg" value="<?php echo $rol["semana"]; ?> ">
+                                            <input id="semana" type="text" class="form-control from-control-lg input-number" value="<?php echo $rol["semana"]; ?> ">
                                         </div>
                                         <div class="col">
                                             <label for="" class="form-control-label" hidden>ID:</label>

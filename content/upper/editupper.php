@@ -73,7 +73,7 @@ $id = $_POST["id"];
                                     <div class="form-row mb-3">
                                         <div class="col">
                                             <label for="" class="form-control-label">Año:</label>
-                                            <input id="year" type="number" class="form-control from-control-lg" value="<?php echo $rol["year"]; ?>">
+                                            <input id="year" type="text" class="form-control from-control-lg input-number" value="<?php echo $rol["year"]; ?>">
 
                                         </div>
                                         <div class="col">
@@ -96,7 +96,7 @@ $id = $_POST["id"];
                                         </div>
                                         <div class="col">
                                             <label for="" class="form-control-label">Semana:</label>
-                                            <input id="semana" type="number" class="form-control from-control-lg" value="<?php echo $rol["semana"]; ?>">
+                                            <input id="semana" type="text" class="form-control from-control-lg" value="<?php echo $rol["semana"]; ?>">
                                         </div>
                                         <div class="col">
                                             <label for="" class="form-control-label" hidden>ID:</label>
