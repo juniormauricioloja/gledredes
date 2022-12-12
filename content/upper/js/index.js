@@ -5,7 +5,6 @@ $(document).ready(function(){
 
 function consulta(pais){
     var cadena = "aux="+pais;
-    console.log(cadena);
     $.ajax({
         type: "POST",
         url: "controller/upperController.php",
