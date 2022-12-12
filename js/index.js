@@ -8,7 +8,6 @@ function login(){
     var pass=$("#password").val();
 
     var cadena="username="+user+"&password="+pass;
-    console.log(cadena);
     $.ajax({
         type:"POST",
         url:"controller/loginController.php",

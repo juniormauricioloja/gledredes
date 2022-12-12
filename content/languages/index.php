@@ -37,7 +37,7 @@ switch ($perfil) {
 
 
 
-    <script src="js/index2.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
 
 </head>
 
@@ -79,10 +79,10 @@ switch ($perfil) {
 
                     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                         <div class="btn-group mr-2" role="group" aria-label="First group">
-                            <button type="button" onclick="consultarMexico();" class="btn btn-secondary">MEXICO</button>
-                            <button type="button" onclick="consultarChile();" class="btn btn-secondary">CHILE</button>
-                            <button type="button" onclick="consultarEcuador();" class="btn btn-secondary">ECUADOR</button>
-                            <button type="button" onclick="consultarLatam();" class="btn btn-secondary">LATAM</button>
+                        <button type="button" onclick="consulta('usermx');" class="btn btn-secondary">MEXICO</button>
+                        <button type="button" onclick="consulta('userch');" class="btn btn-secondary">CHILE</button>
+                        <button type="button" onclick="consulta('userec');" class="btn btn-secondary">ECUADOR</button>
+                        <button type="button" onclick="consulta('userltm');" class="btn btn-secondary">LATAM</button>
                         </div>
                     </div>
 

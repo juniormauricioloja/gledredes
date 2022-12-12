@@ -22,77 +22,6 @@ function consulta(pais){
     });
 }
 
-function consultarMexico(){
-    var cadena = "aux=consultarMexico";
-    $.ajax({
-        type: "POST",
-        url: "controller/upperController.php",
-        data: cadena,
-        success: function (data) {
-            $("#divTableFlujo").html(data);
-            dataTable("tableRedes");
-            
-        },
-        error: function (e) {
-            console.log(e);
-            error_noti("Sistema no disponible");
-        }
-    });
-}
-
-function consultarChile(){
-    var cadena = "aux=consultarChile";
-    $.ajax({
-        type: "POST",
-        url: "controller/upperController.php",
-        data: cadena,
-        success: function (data) {
-            $("#divTableFlujo").html(data);
-            dataTable("tableRedes");
-            
-        },
-        error: function (e) {
-            console.log(e);
-            error_noti("Sistema no disponible");
-        }
-    });
-}
-
-function consultarEcuador(){
-    var cadena = "aux=consultarEcuador";
-    $.ajax({
-        type: "POST",
-        url: "controller/upperController.php",
-        data: cadena,
-        success: function (data) {
-            $("#divTableFlujo").html(data);
-            dataTable("tableRedes");
-            
-        },
-        error: function (e) {
-            console.log(e);
-            error_noti("Sistema no disponible");
-        }
-    });
-}
-
-function consultarLatam(){
-    var cadena = "aux=consultarLatam";
-    $.ajax({
-        type: "POST",
-        url: "controller/upperController.php",
-        data: cadena,
-        success: function (data) {
-            $("#divTableFlujo").html(data);
-            dataTable("tableRedes");
-            
-        },
-        error: function (e) {
-            console.log(e);
-            error_noti("Sistema no disponible");
-        }
-    });
-}
 
 
 function dataTable(nombreTabla) {
@@ -180,7 +109,6 @@ function searchState(id){
         url: "controller/upperController.php",
         data: cadena,
         success: function (data) {
-            console.log(data);
             $("#comentarios").html(data)
         },
         error: function (e) {
@@ -200,7 +128,6 @@ function modalAprobar(status){
         url: "controller/upperController.php",
         data: cadena,
         success: function (data) {
-            console.log(data);
             $("#informacion").html(data)
         },
         error: function (e) {
@@ -223,7 +150,6 @@ function aprobar(){
         url: "controller/upperController.php",
         data: cadena,
         success: function (data) {
-            console.log(data);
             
             consulta(document.getElementById('perfil').value);
             $("#infoModal").modal("hide");
@@ -248,7 +174,6 @@ function ejecutado(){
         url: "controller/upperController.php",
         data: cadena,
         success: function (data) {
-            console.log(data);
             
             consulta(document.getElementById('perfil').value);
             $("#infoModal").modal("hide");
@@ -307,7 +232,6 @@ function puntuacion(){
         url: "controller/upperController.php",
         data: cadena,
         success: function (data) {
-            console.log(data);
             
             consulta(document.getElementById('perfil').value);
             $("#infoModal").modal("hide");
