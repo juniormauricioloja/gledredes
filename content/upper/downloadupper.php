@@ -8,6 +8,24 @@ $path_so = "../../cabecera.php";
 #} else {
 #   $path_so = "/var/www/html/gled/cabecera.php";
 #}
+$perfil = $_SESSION['perfil'];
+switch ($perfil){
+    case 'usermx':
+        $stringPais = 'México';
+        break;
+    case 'userch':
+        $stringPais = 'Chile';
+        break;
+    case 'userec':
+        $stringPais = 'Ecuador';
+        break;
+    case 'Latam':
+        $stringPais = 'Latam';
+        break;
+    default:
+        $stringPais = '';
+        break;
+}
 ?>
 <!doctype html>
 <html lang="es">
@@ -64,6 +82,10 @@ $path_so = "../../cabecera.php";
                         <div class="col">
                             <div class="form-row mb-3">
 
+                            <?php
+                            if ($perfil == 'superadmin'){
+                            ?>
+
 
                                 <div class="col">
                                     <label for="" class="form-control-label">País:</label>
@@ -76,6 +98,19 @@ $path_so = "../../cabecera.php";
                                         <option value="Todos">Seleccionar Todos</option>
                                     </select>
                                 </div>
+
+                                <?php
+                            }else{
+                                ?>
+                                <div class="col">
+                                    <label for="" class="form-control-label">País:</label>
+                                    <input id="pais" type="text" class="form-control from-control-lg" value="<?php echo $stringPais?>" readonly>
+                                    
+                                </div>
+
+                                <?php
+                            }
+                                ?>
 
                                 <div class="col">
                                     <label for="" class="form-control-label">Responsable:</label>

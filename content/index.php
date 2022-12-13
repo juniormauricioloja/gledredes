@@ -47,7 +47,7 @@ $path_so = "../cabecera.php";
                     <link rel="stylesheet" href="../assets/plugins/notifications/css/lobibox.min.css" />
 
 
-                    <title>Inicio | 360</title>
+                    <title>Inicio | GLED</title>
                 </head>
 
                 <body>

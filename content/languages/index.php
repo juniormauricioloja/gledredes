@@ -76,19 +76,16 @@ switch ($perfil) {
                 <?php
                 if ($perfil == 'superadmin') {
                 ?>
-
                     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                         <div class="btn-group mr-2" role="group" aria-label="First group">
-                        <button type="button" onclick="consulta('usermx');" class="btn btn-secondary">MEXICO</button>
-                        <button type="button" onclick="consulta('userch');" class="btn btn-secondary">CHILE</button>
-                        <button type="button" onclick="consulta('userec');" class="btn btn-secondary">ECUADOR</button>
-                        <button type="button" onclick="consulta('userltm');" class="btn btn-secondary">LATAM</button>
+                            <button type="button" onclick="consulta('superadminmx');" class="btn btn-secondary">MEXICO</button>
+                            <button type="button" onclick="consulta('superadminch');" class="btn btn-secondary">CHILE</button>
+                            <button type="button" onclick="consulta('superadminec');" class="btn btn-secondary">ECUADOR</button>
+                            <button type="button" onclick="consulta('superadminltm');" class="btn btn-secondary">LATAM</button>
                         </div>
                     </div>
-
                 <?php
                 }
-
                 ?>
 
                 <div class="col">
@@ -154,6 +151,35 @@ switch ($perfil) {
                 <div class="modal-body">
                     <div id="informacion"></div>
                     <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="eliminateRed" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> <i class="bi bi-plus-lg"> </i>Eliminar Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- FORM TO ADD TASKS -->
+                            <div class="col-center">
+                                <img src="../../img/danger2.png" alt="">
+                            </div>
+                            <h4 class="col-center">Esta seguro que desea eliminar este Registro?</h4>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="eliminate();" style="width: 100px;">Eliminar</button>
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                     </div>
                 </div>

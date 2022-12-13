@@ -34,7 +34,7 @@ $id = $_POST["id"];
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
-    <script src="js/editupper2.js" type="text/javascript"></script>
+    <script src="js/editupper3.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -96,7 +96,7 @@ $id = $_POST["id"];
                                         </div>
                                         <div class="col">
                                             <label for="" class="form-control-label">Semana:</label>
-                                            <input id="semana" type="text" class="form-control from-control-lg" value="<?php echo $rol["semana"]; ?>">
+                                            <input id="semana" type="text" class="form-control from-control-lg input-number" value="<?php echo $rol["semana"]; ?>">
                                         </div>
                                         <div class="col">
                                             <label for="" class="form-control-label" hidden>ID:</label>

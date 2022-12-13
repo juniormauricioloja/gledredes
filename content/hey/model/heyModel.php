@@ -88,9 +88,14 @@ function searchHey($pais,$responsable,$status,$startDate,$endDate){
 
     $sqlSelect = "SELECT * FROM `dbcontenidoredeshey` WHERE `fecha` BETWEEN '".$startDate."' AND '".$endDate."' ".$selectPais." ".$selectResponsable." ".$selectStatus;
     $result = mysqli_query($conection, $sqlSelect);
-    return $result;
+    return $result;  
+}
 
-    
+function deleteRed($idaux){
+    include "../../../models/conection.php";
+    $sqlDelete="DELETE FROM `dbcontenidoredeshey` WHERE `id` = '$idaux'";
+    $result = mysqli_query($conection, $sqlDelete);
+    return $result;
 }
 
 /*

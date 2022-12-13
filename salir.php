@@ -5,5 +5,5 @@ unset($_COOKIE['PHPSESSID']);
 session_unset();
 session_destroy();
 ob_flush();
-header("location:/gledchile/");
+header("location:/gledredes/");
 ?>

@@ -1,8 +1,93 @@
 <?php
 include "../model/upperModel.php";
 
+
 function consultaPaises($pais)
 {
+
+  $listaPerfiles = consultarRedes($pais);
+?>
+  <table class="display table table-hover table-striped" style="width: 100%;" id="tableRedes">
+    <thead>
+
+      <tr>
+        <th></th>
+        <th>STATUS</th>
+        <th>PAIS</th>
+        <th>AÑO</th>
+        <th>MES</th>
+        <th>SEMANA</th>
+        <th>FECHA</th>
+        <th>OBJETIVO</th>
+        <th>HERRAMIENTA</th>
+        <th>COLABORACIÓN</th>
+        <th>COPY POST</th>
+        <th>CONTENIDO</th>
+        <th>RED SOCIAL</th>
+        <th>COMENTARIO</th>
+        <th>PUNTUACION</th>
+        <th>RESPONSABLE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <?php
+        foreach ($listaPerfiles as $auxLista) {
+        ?>
+          <td>
+            <table>
+
+              <td>
+                <button class="btn btn-outline-secondary btn-sm mr-1" onclick="modify('<?php echo $auxLista["id"]; ?>');">
+                  <form action="index.php" method="POST">
+                    <input name="id" value="<?php echo $auxLista["id"]; ?>" type="hidden" id="id">
+                    <span class="bi bi-arrow-clockwise"></span>
+                  </form>
+                </button>
+              </td>
+
+
+              <td>
+                <form action="editupper.php" method="POST">
+                  <input name="id" value="<?php echo $auxLista["id"]; ?>" type="hidden" id="id">
+                  <button class="btn btn-outline-secondary btn-sm mr-1" type="submit">
+                    <span class="bi bi-pencil"></span>
+                  </button>
+                </form>
+              </td>
+            </table>
+
+          </td>
+
+          <td><?php echo $auxLista["status"]; ?></td>
+          <td><?php echo $auxLista["pais"]; ?></td>
+          <td><?php echo $auxLista["year"]; ?></td>
+          <td><?php echo $auxLista["mes"]; ?></td>
+          <td><?php echo $auxLista["semana"]; ?></td>
+          <td><?php echo $auxLista["fecha"]; ?></td>
+          <td><?php echo $auxLista["objetivo"]; ?></td>
+          <td><?php echo $auxLista["herramienta"]; ?></td>
+          <td><?php echo $auxLista["colaboracion"]; ?></td>
+          <td><?php echo $auxLista["post"]; ?></td>
+          <td><?php echo $auxLista["contenido"]; ?></td>
+          <td><?php echo $auxLista["redsocial"]; ?></td>
+          <td><?php echo $auxLista["comentario"]; ?></td>
+          <td><?php echo $auxLista["puntuacion"]; ?></td>
+          <td><?php echo $auxLista["responsable"]; ?></td>
+      </tr>
+    <?php
+        }
+    ?>
+    </tbody>
+  </table>
+  <?php
+
+}
+
+
+function consultaPaisesAdmin($pais)
+{
+
   $listaPerfiles = consultarRedes($pais);
 ?>
   <table class="display table table-hover table-striped" style="width: 100%;" id="tableRedes">
@@ -52,6 +137,17 @@ function consultaPaises($pais)
                   </button>
                 </form>
               </td>
+
+              <td>
+                <button class="btn btn-outline-secondary btn-sm mr-1" onclick="deleteRed('<?php echo $auxLista["id"]; ?>');">
+                  <form action="" method="POST">
+                    <input name="id" value="<?php echo $auxLista["id"]; ?>" type="hidden" id="id">
+
+                    <span class="bi bi-trash"></span>
+                </button>
+                </form>
+              </td>
+
             </table>
 
           </td>
@@ -82,6 +178,10 @@ function consultaPaises($pais)
 }
 
 
+
+
+
+
 $aux = $_POST["aux"];
 
 switch ($aux) {
@@ -103,7 +203,23 @@ switch ($aux) {
     break;
   case "superadmin":
     $pais = 'mexico';
-    $consulta = consultaPaises($pais);
+    $consulta = consultaPaisesAdmin($pais);
+    break;
+  case "superadminmx":
+    $pais = 'mexico';
+    $consulta = consultaPaisesAdmin($pais);
+    break;
+  case "superadminch":
+    $pais = 'chile';
+    $consulta = consultaPaisesAdmin($pais);
+    break;
+  case "superadminec":
+    $pais = 'ecuador';
+    $consulta = consultaPaisesAdmin($pais);
+    break;
+  case "superadminltm":
+    $pais = 'latam';
+    $consulta = consultaPaisesAdmin($pais);
     break;
 }
 
@@ -402,10 +518,6 @@ if ($aux == "addRedSocial") {
   }
 }
 
-
-
-
-
 if($aux == "searchUpper")
 {
   $pais = $_POST["pais"];
@@ -442,8 +554,6 @@ if($aux == "searchUpper")
           <?php
           foreach ($listaPerfiles as $auxLista) {
           ?>
-            
-  
             <td><?php echo $auxLista["status"]; ?></td>
             <td><?php echo $auxLista["pais"]; ?></td>
             <td><?php echo $auxLista["year"]; ?></td>
@@ -466,4 +576,10 @@ if($aux == "searchUpper")
       </tbody>
     </table>
     <?php
+}
+
+if($aux == "deleteRed"){
+  $idaux=$_POST["idaux"];
+  $result=deleteRed($idaux);
+  echo $result;
 }

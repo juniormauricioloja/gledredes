@@ -93,6 +93,13 @@ function searchUpper($pais,$responsable,$status,$startDate,$endDate){
     
 }
 
+function deleteRed($idaux){
+    include "../../../models/conection.php";
+    $sqlDelete="DELETE FROM `dbcontenidoredesupper` WHERE `id` = '$idaux'";
+    $result = mysqli_query($conection, $sqlDelete);
+    return $result;
+}
+
 /*
 
 function checkFlujo($id,$comentarios){

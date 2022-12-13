@@ -33,13 +33,18 @@ function update(){
     let comentario = document.getElementById("comentario").value;
     let responsable = document.getElementById("responsable").value;
 
-    if(year == "" || mes == "" || semana =="" ||fecha || "" ){
-        $("#year").focus();
-        $("#mes").focus();
-        $("#semana").focus();
-        $("#fecha").focus();
+    if(year == "" || mes == "" || semana =="" || fecha =="" ){
+        if(year == ""){
+            $("#year").focus();
+        }else if(mes == ""){
+            $("#mes").focus();
+        }else if(semana == ""){
+            $("#semana").focus();
+        }else if(fecha == ""){
+            $("#fecha").focus();
+        }
         error_noti("Complete los campos faltantes");
-    }
+    }else{
 
     var cadena = "aux=update&year="+year+"&id="+id+"&mes="+mes+"&semana="+semana+"&fecha="+fecha+"&objetivo="+objetivo+"&herramienta="+herramienta+
     "&colaboracion="+colaboracion+"&redsocial="+redsocial+"&post="+post+"&contenido="+contenido+"&linkblog="+linkblog+"&linkrrss="+linkrrss+
@@ -64,6 +69,7 @@ function update(){
             error_noti("Sistema no disponible");
         }
     });
+}
 
 
 }

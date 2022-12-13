@@ -8,7 +8,7 @@ $path_so = "../../cabecera.php";
 #} else {
 #   $path_so = "/var/www/html/gled/cabecera.php";
 #}
-$perfil = $_SESSION['perfil'];
+$perfil = 'usermx';
 switch ($perfil) {
     case 'usermx':
         $stringPais = 'México';
@@ -73,22 +73,19 @@ switch ($perfil) {
                 </div>
 
                 <?php
-                        if ($perfil == 'superadmin') {
-                        ?>
-
-                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                    <div class="btn-group mr-2" role="group" aria-label="First group">
-                        <button type="button" onclick="consulta('usermx');" class="btn btn-secondary">MEXICO</button>
-                        <button type="button" onclick="consulta('userch');" class="btn btn-secondary">CHILE</button>
-                        <button type="button" onclick="consulta('userec');" class="btn btn-secondary">ECUADOR</button>
-                        <button type="button" onclick="consulta('userltm');" class="btn btn-secondary">LATAM</button>
+                if ($perfil == 'superadmin') {
+                ?>
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group mr-2" role="group" aria-label="First group">
+                            <button type="button" onclick="consulta('superadminmx');" class="btn btn-secondary">MEXICO</button>
+                            <button type="button" onclick="consulta('superadminch');" class="btn btn-secondary">CHILE</button>
+                            <button type="button" onclick="consulta('superadminec');" class="btn btn-secondary">ECUADOR</button>
+                            <button type="button" onclick="consulta('superadminltm');" class="btn btn-secondary">LATAM</button>
+                        </div>
                     </div>
-                </div>
-
                 <?php
-                        }
-
-                        ?>
+                }
+                ?>
 
                 <div class="col">
                     <label for="" class="form-control-label" hidden>ID:</label>
@@ -111,11 +108,9 @@ switch ($perfil) {
                     <p></p>
                 </div>
 
-
             </main>
         </div>
     </div>
-
 
     <div id="updateModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
@@ -128,9 +123,7 @@ switch ($perfil) {
                 </div>
                 <div class="modal-body">
 
-
                     <div id="comentarios"></div>
-
 
                     <div class="modal-footer">
 
@@ -160,6 +153,35 @@ switch ($perfil) {
         </div>
     </div>
 
+    <div id="eliminateRed" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> <i class="bi bi-plus-lg"> </i>Eliminar Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- FORM TO ADD TASKS -->
+                            <div class="col-center">
+                                <img src="../../img/danger2.png" alt="">
+                            </div>
+                            <h4 class="col-center">Esta seguro que desea eliminar este Registro?</h4>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="eliminate();" style="width: 100px;">Eliminar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--end page main-->
 
     <!--start overlay-->
@@ -169,15 +191,7 @@ switch ($perfil) {
     <!--Start Back To Top Button-->
     <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
     <!--End Back To Top Button-->
-
     <!--start switcher-->
-
-
     <!--end wrapper-->
-
-
-
-
 </body>
-
 </html>

@@ -39,9 +39,10 @@ function dataTable(nombreTabla) {
     var table = $('#' + nombreTabla + '').DataTable({
         //orderCellsTop: true,
         //fixedHeader: true,
-        "pageLength": 8,
+        
         "scrollX": true,
-        dom: 'Bfrtip',
+        "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"] ],
+        dom: '<l<t>ip>',
         buttons: [],
         language: {
             "decimal": ",",
@@ -51,7 +52,7 @@ function dataTable(nombreTabla) {
             "infoPostFix": "",
             "infoFiltered": "(filtrado de un total de _MAX_ registros)",
             "loadingRecords": "Cargando...",
-            "lengthMenu": "Mostrar _MENU_ registros",
+            "lengthMenu": "Mostrar _MENU_ Registros",
             "paginate": {
                 "first": "Primero",
                 "last": "Ultimo",
@@ -241,4 +242,40 @@ function puntuacion(){
         }
     });
 
+}
+
+var value;
+function deleteRed(id){
+    const id2=id;
+    window.value=id2;  
+    $('#eliminateRed').modal({backdrop: 'static', keyboard: false});
+    $("#eliminateRed").modal("show");
+    
+}
+
+function eliminate(){
+    var cadena = "aux=deleteRed&idaux="+window.value;
+    console.log(cadena);
+    $.ajax({
+        type: "POST",
+        url: "controller/languagesController.php",
+        data: cadena,
+        success: function (data) {
+            if (data == true) {
+                
+                success_noti("Registro Eliminado");
+                $("#eliminateRed").modal("hide");
+                consulta(document.getElementById('perfil').value);
+                
+            }else {
+                error_noti("Error al eliminar");
+                console.log(data);
+            }
+      
+        },
+        error: function (e) {
+            console.log(e);
+            error_noti("Sistema no disponible");
+        }
+    });
 }
