@@ -3,19 +3,21 @@ $(document).ready(function(){
     
 });
 
-function searchUpper(){
+function searchHey(){
 
     let pais = document.getElementById("pais").value;
     let responsable = document.getElementById("responsable").value;
     let status = document.getElementById("status").value;
     let startDate = document.getElementById("startDate").value;
     let endDate = document.getElementById("endDate").value;
+    console.log(startDate);
+    console.log(endDate);
 
-    var cadena = "aux=searchUpper&pais="+pais+"&responsable="+responsable+"&status="+status+"&startDate="+startDate+"&endDate="+endDate;
+    var cadena = "aux=searchHey&pais="+pais+"&responsable="+responsable+"&status="+status+"&startDate="+startDate+"&endDate="+endDate;
 
     $.ajax({
         type: "POST",
-        url: "controller/upperController.php",
+        url: "controller/heyController.php",
         data: cadena,
         success: function (data) {
             $("#divTableFlujo").html(data);
@@ -37,15 +39,15 @@ function dataTable(nombreTabla) {
     var table = $('#' + nombreTabla + '').DataTable({
         //orderCellsTop: true,
         //fixedHeader: true,
-        "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"] ],
-        dom: '<l<t>ip>',
         "scrollX": true,
+        "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"] ],
+        dom: '<Bl<t>ip>',
         buttons: [
             {
                 extend: 'pdf',
                 text: 'Descargar en PDF',
                 orientation: 'landscape',
-                title: 'Reporte Upper',
+                title: 'Reporte Hey',
                 pageSize: 'A3',
                 header: true,
                 footer: false,

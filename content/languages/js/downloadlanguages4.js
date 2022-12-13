@@ -3,21 +3,19 @@ $(document).ready(function(){
     
 });
 
-function searchHey(){
+function searchLanguages(){
 
     let pais = document.getElementById("pais").value;
     let responsable = document.getElementById("responsable").value;
     let status = document.getElementById("status").value;
     let startDate = document.getElementById("startDate").value;
     let endDate = document.getElementById("endDate").value;
-    console.log(startDate);
-    console.log(endDate);
 
-    var cadena = "aux=searchHey&pais="+pais+"&responsable="+responsable+"&status="+status+"&startDate="+startDate+"&endDate="+endDate;
+    var cadena = "aux=searchLanguages&pais="+pais+"&responsable="+responsable+"&status="+status+"&startDate="+startDate+"&endDate="+endDate;
 
     $.ajax({
         type: "POST",
-        url: "controller/heyController.php",
+        url: "controller/languagesController.php",
         data: cadena,
         success: function (data) {
             $("#divTableFlujo").html(data);
@@ -39,15 +37,15 @@ function dataTable(nombreTabla) {
     var table = $('#' + nombreTabla + '').DataTable({
         //orderCellsTop: true,
         //fixedHeader: true,
-        "scrollX": true,
         "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"] ],
-        dom: '<l<t>ip>',
+        dom: '<Bl<t>ip>',
+        "scrollX": true,
         buttons: [
             {
                 extend: 'pdf',
                 text: 'Descargar en PDF',
                 orientation: 'landscape',
-                title: 'Reporte Hey',
+                title: 'Reporte Languages',
                 pageSize: 'A3',
                 header: true,
                 footer: false,

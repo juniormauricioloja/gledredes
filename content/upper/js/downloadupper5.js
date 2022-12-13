@@ -3,7 +3,7 @@ $(document).ready(function(){
     
 });
 
-function searchLanguages(){
+function searchUpper(){
 
     let pais = document.getElementById("pais").value;
     let responsable = document.getElementById("responsable").value;
@@ -11,11 +11,11 @@ function searchLanguages(){
     let startDate = document.getElementById("startDate").value;
     let endDate = document.getElementById("endDate").value;
 
-    var cadena = "aux=searchLanguages&pais="+pais+"&responsable="+responsable+"&status="+status+"&startDate="+startDate+"&endDate="+endDate;
+    var cadena = "aux=searchUpper&pais="+pais+"&responsable="+responsable+"&status="+status+"&startDate="+startDate+"&endDate="+endDate;
 
     $.ajax({
         type: "POST",
-        url: "controller/languagesController.php",
+        url: "controller/upperController.php",
         data: cadena,
         success: function (data) {
             $("#divTableFlujo").html(data);
@@ -38,20 +38,18 @@ function dataTable(nombreTabla) {
         //orderCellsTop: true,
         //fixedHeader: true,
         "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"] ],
-        dom: '<l<t>ip>',
+        dom: '<Bl<t>ip>',
         "scrollX": true,
         buttons: [
             {
                 extend: 'pdf',
                 text: 'Descargar en PDF',
                 orientation: 'landscape',
-                title: 'Reporte Languages',
+                title: 'Reporte Upper',
                 pageSize: 'A3',
                 header: true,
                 footer: false,
-                
             }
-            
         ],
         language: {
             "decimal": ",",
