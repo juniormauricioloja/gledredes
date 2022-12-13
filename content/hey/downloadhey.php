@@ -8,6 +8,24 @@ $path_so = "../../cabecera.php";
 #} else {
 #   $path_so = "/var/www/html/gled/cabecera.php";
 #}
+$perfil = $_SESSION['perfil'];
+switch ($perfil){
+    case 'usermx':
+        $stringPais = 'México';
+        break;
+    case 'userch':
+        $stringPais = 'Chile';
+        break;
+    case 'userec':
+        $stringPais = 'Ecuador';
+        break;
+    case 'Latam':
+        $stringPais = 'Latam';
+        break;
+    default:
+        $stringPais = '';
+        break;
+}
 ?>
 <!doctype html>
 <html lang="es">

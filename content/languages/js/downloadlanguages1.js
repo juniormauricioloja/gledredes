@@ -37,10 +37,9 @@ function dataTable(nombreTabla) {
     var table = $('#' + nombreTabla + '').DataTable({
         //orderCellsTop: true,
         //fixedHeader: true,
-        "pageLength": 8,
+        "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"] ],
+        dom: '<l<t>ip>',
         "scrollX": true,
-        search:false,
-        dom: 'Bfrtip',
         buttons: [
             {
                 extend: 'pdf',
