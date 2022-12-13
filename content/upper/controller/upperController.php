@@ -550,7 +550,7 @@ if($aux == "searchUpper")
   
         <tr>
           
-          <th>STATS</th>
+          <th>STATUS</th>
           <th>PAIS</th>
           <th>AÑO</th>
           <th>MES</th>
