@@ -31,6 +31,23 @@ function consultaPaises($pais)
       <tr>
         <?php
         foreach ($listaPerfiles as $auxLista) {
+          $state = $auxLista["status"];
+          switch ($state){
+            case "EN PROCESO":
+              $auxEstado2 = "badge bg-info";
+              break;
+            case "APROBADO":
+              $auxEstado2 = "badge bg-success";
+              break;
+            case "EJECUTADO":
+              $auxEstado2 = "badge bg-primary";
+              break;
+            case "EVALUADO":
+              $auxEstado2 = "badge bg-secondary";
+              break;
+            default :
+              break;
+          }
         ?>
           <td>
             <table>
@@ -56,7 +73,7 @@ function consultaPaises($pais)
 
           </td>
 
-          <td><?php echo $auxLista["status"]; ?></td>
+          <td class="<?php echo $auxEstado2; ?>"><?php echo $auxLista["status"]; ?></td>
           <td><?php echo $auxLista["pais"]; ?></td>
           <td><?php echo $auxLista["year"]; ?></td>
           <td><?php echo $auxLista["mes"]; ?></td>
