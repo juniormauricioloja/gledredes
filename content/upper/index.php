@@ -31,7 +31,7 @@ switch ($perfil){
 
 <head>
     <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
-    <title>Upper</title>
+    <title>Upper | GLED</title>
 
     <?php require_once "scripts.php"; ?>
 

@@ -8,7 +8,7 @@ $path_so = "../../cabecera.php";
 #} else {
 #   $path_so = "/var/www/html/gled/cabecera.php";
 #}
-$perfil = 'usermx';
+$perfil = $_SESSION['perfil'];
 switch ($perfil) {
     case 'usermx':
         $stringPais = 'México';
@@ -31,7 +31,7 @@ switch ($perfil) {
 
 <head>
     <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
-    <title>Contenido Redes</title>
+    <title>Hey | GLED</title>
 
     <?php require_once "scripts.php"; ?>
 
