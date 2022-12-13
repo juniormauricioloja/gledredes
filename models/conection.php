@@ -1,5 +1,4 @@
 <?php
-
    
 $host='localhost';
 $user2='gledsistema';

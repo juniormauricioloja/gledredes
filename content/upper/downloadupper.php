@@ -91,7 +91,7 @@ switch ($perfil){
                                     <label for="" class="form-control-label">País:</label>
                                     <select name="" id="pais" class="form-control from-control-lg">
                                         <option value="">---Seleccione un País---</option>
-                                        <option value="Mexico">México</option>
+                                        <option value="Mexico">Mexico</option>
                                         <option value="Chile">Chile</option>
                                         <option value="Ecuador">Ecuador</option>
                                         <option value="Latam">Latam</option>
@@ -100,17 +100,24 @@ switch ($perfil){
                                 </div>
 
                                 <?php
-                            }else{
+                            }else if($perfil == 'usermx'){
                                 ?>
                                 <div class="col">
                                     <label for="" class="form-control-label">País:</label>
-                                    <input id="pais" type="text" class="form-control from-control-lg" value="<?php echo $stringPais?>" readonly>
+                                    <input id="pais" type="text" class="form-control from-control-lg" value="Mexico" readonly>
                                     
                                 </div>
 
                                 <?php
+                            }else{
+                            ?>
+                            <div class="col">
+                                <label for="" class="form-control-label">País:</label>
+                                <input id="pais" type="text" class="form-control from-control-lg" value="<?php echo $stringPais?>" readonly>  
+                            </div>
+                            <?php
                             }
-                                ?>
+                            ?>
 
                                 <div class="col">
                                     <label for="" class="form-control-label">Responsable:</label>
