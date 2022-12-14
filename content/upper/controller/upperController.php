@@ -549,7 +549,7 @@ if($aux == "searchUpper")
       <thead>
   
         <tr>
-          
+        <th hidden>ID</th>
         <th>AÑO</th>
         <th>SEMANA</th>
         <th>MES</th>
@@ -583,6 +583,7 @@ if($aux == "searchUpper")
           <?php
           foreach ($listaPerfiles as $auxLista) {
           ?>
+            <td hidden><?php echo $auxLista["id"]; ?></td>
             <td><?php echo $auxLista["year"]; ?></td>
             <td><?php echo $auxLista["semana"]; ?></td>
             <td><?php echo $auxLista["mes"]; ?></td>

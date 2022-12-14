@@ -9,6 +9,7 @@ $path_so = "../../cabecera.php";
 #   $path_so = "/var/www/html/gled/cabecera.php";
 #}
 $perfil = $_SESSION['perfil'];
+$_SESSION['programa'] = 'hey';
 switch ($perfil) {
     case 'usermx':
         $stringPais = 'México';
@@ -65,9 +66,19 @@ switch ($perfil) {
                                 Subir Planificación
                             </a>
                         <?php
-                        }
-
+                        } else {
                         ?>
+                            <a class="btn btn btn-sm btn-outline-primary" role="button" href="../update/index.php">
+                                <span><i class="bi bi-arrow-clockwise"></i></i></span>
+                                Actualizar Datos
+                            </a>
+
+
+                        <?php
+                        }
+                        ?>
+
+
                     </div>
 
                 </div>
@@ -194,4 +205,5 @@ switch ($perfil) {
     <!--start switcher-->
     <!--end wrapper-->
 </body>
+
 </html>
