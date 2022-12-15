@@ -4,11 +4,11 @@ function updateTemp($id, $year, $semana, $mes, $fecha, $objetivo, $status, $herr
 {
     include "../../../models/conection.php";
 
-    $string = "('$id[0]','$year[0]','$mes[0]','$semana[0]', '$fecha[0]','','$objetivo[0]','$herramienta[0]','$colaboracion[0]','$post[0]','$contenido[0]','$redsocial[0]','$topico[0]','','','','','','$linkblog[0]','$linkrrss[0]','$linkweb[0]','$linkform[0]','$youtube[0]','$arte[0]','$logo[0]','$comentarios[0]','','','','','','','','APROBADO','$responsable[0]')";
+    $string = "('$id[0]','$year[0]','$mes[0]','$semana[0]', '$fecha[0]','','$objetivo[0]','$herramienta[0]','$colaboracion[0]','$post[0]','$contenido[0]','$redsocial[0]','$topico[0]','','','','','','$linkblog[0]','$linkrrss[0]','$linkweb[0]','$linkform[0]','$youtube[0]','$arte[0]','$logo[0]','$comentarios[0]','','','','','','','','$status[0]','$responsable[0]')";
 
     for ($i = 1; $i < $numeroFilas - 1; $i++) {
-        if ($valor1[$i] != '' && $valor2[$i] != '' && $valor3[$i] != '') {
-            $string = $string . ",('$id[$i]','$year[$i]','$mes[$i]','$semana[$i]', '$fecha[$i]','','$objetivo[$i]','$herramienta[$i]','$colaboracion[$i]','$post[$i]','$contenido[$i]','$redsocial[$i]','$topico[$i]','','','','','','$linkblog[$i]','$linkrrss[$i]','$linkweb[$i]','$linkform[$i]','$youtube[$i]','$arte[$i]','$logo[$i]','$comentarios[$i]','','','','','','','','APROBADO','$responsable[$i]')";
+        if ($valor1[$i] != '') {
+            $string = $string . ",('$id[$i]','$year[$i]','$mes[$i]','$semana[$i]', '$fecha[$i]','','$objetivo[$i]','$herramienta[$i]','$colaboracion[$i]','$post[$i]','$contenido[$i]','$redsocial[$i]','$topico[$i]','','','','','','$linkblog[$i]','$linkrrss[$i]','$linkweb[$i]','$linkform[$i]','$youtube[$i]','$arte[$i]','$logo[$i]','$comentarios[$i]','','','','','','','','$status[$i]','$responsable[$i]')";
         }
     }
     //$sqlUpload = "INSERT INTO `dbcontenidoredes`(`id`,`year`, `semana`, `mes`, `fecha`, `objetivo`, `status`, `herramienta`, `colaboracion`, `redsocial`, `topico`,`post`, `contenido`,  `linkblog`, `linkrrss`, `linkweb`, `linkform`, `linkyoutube`, `arte`, `logos`, `comentario`, `responsable`) VALUES $string";
