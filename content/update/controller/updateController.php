@@ -69,7 +69,7 @@ if(isset($_FILES["file"]))
 
         $uploadFile = updateTemp($valor1,$valor2,$valor3,$valor4,$valor5,$valor6,$valor7,$valor8,$valor9,$valor10,$valor11,$valor12,$valor13,$valor14,$valor15,$valor16
         ,$valor17,$valor18,$valor19,$valor20,$valor21,$valor22,$numeroFilas);
-        echo $aux->format('Y-m-d');
+        echo true;
     }else{
         echo false;
     }
