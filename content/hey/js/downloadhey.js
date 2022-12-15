@@ -42,7 +42,7 @@ function dataTable(nombreTabla) {
         "scrollX": true,
         "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"] ],
         dom: '<Bl<t>ip>',
-        buttons: [
+        buttons: ['excel',
             {
                 extend: 'pdf',
                 text: 'Descargar en PDF',
@@ -51,9 +51,7 @@ function dataTable(nombreTabla) {
                 pageSize: 'A3',
                 header: true,
                 footer: false,
-                
             }
-            
         ],
         language: {
             "decimal": ",",
