@@ -13,8 +13,8 @@ function upload(string){
         contentType:false,
         processData:false,
         data:datosForm,
-        url:"controller/updateController.php",
-        beforeSend:function(xhr){
+        url:'controller/updateController.php',
+        beforeSend:function(xhs){
             $("#ajaxBusy").show();
         },
         success:function(data){

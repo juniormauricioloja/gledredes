@@ -8,7 +8,7 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use \PhpOffice\PhpSpreadsheet\Shared\Date;
-
+$aux = $_POST["aux"];
 
 if(isset($_FILES["file"]))
 {
@@ -26,8 +26,6 @@ if(isset($_FILES["file"]))
         $hojaActual = $documento->getSheet(0);
         $numeroFilas = $hojaActual->getHighestDataRow();
         $letra = $hojaActual->getHighestColumn();
-    
-
     
         for($indiceFila = 3; $indiceFila<=$numeroFilas; $indiceFila++){
             
@@ -71,7 +69,7 @@ if(isset($_FILES["file"]))
     }
 }
 
-$aux = $_POST["aux"];
+
 
 if($aux == "uploadFile"){
     $programa = $_POST["programa"];
