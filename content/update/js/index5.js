@@ -10,10 +10,13 @@ function upload(string){
 
     $.ajax({
         type: "POST",
-        contentType:false,
+        dataType: "html",
         processData:false,
+        cache: false,
+        contentType: false,
         data:datosForm,
         url:'controller/updateController.php',
+
         beforeSend:function(xhr){
             $("#ajaxBusy").show();
         },
