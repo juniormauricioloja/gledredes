@@ -39,7 +39,7 @@ function uploadfile(string){
     $.ajax({
         type: "POST",
         data:cadena,
-        url:"controller/updateController.php",
+        url:"controller/update2Controller.php",
         beforeSend:function(xhr){
             $("#ajaxBusy").show();
         },

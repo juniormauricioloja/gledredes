@@ -1,8 +1,6 @@
 <?php
 session_start();
-ini_set('display_startup_errors', 1);
-ini_set('display_errors', 1);
-error_reporting(-1);
+
 
 include "../model/updateModel.php";
 require 'vendor/autoload.php';
@@ -11,8 +9,6 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use \PhpOffice\PhpSpreadsheet\Shared\Date;
-$aux = $_POST["aux"];
-
 if(isset($_FILES["file"]))
 {
     $fileName = $_FILES['file']['name'];
@@ -76,10 +72,4 @@ if(isset($_FILES["file"]))
 }
 
 
-
-if($aux == "uploadFile"){
-    $programa = $_POST["programa"];
-    $resultado = uploadFile($programa);
-    echo $resultado;
-}
 ?>

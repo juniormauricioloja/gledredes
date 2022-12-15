@@ -1,0 +1,15 @@
+<?php
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1);
+session_start();
+include "../model/updateModel.php";
+
+$aux = $_POST["aux"];
+
+if($aux == "uploadFile"){
+    $programa = $_POST["programa"];
+    $resultado = uploadFile($programa);
+    echo $resultado;
+}
+?>
