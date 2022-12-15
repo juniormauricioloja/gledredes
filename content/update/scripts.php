@@ -62,7 +62,7 @@ date_default_timezone_set('America/Guayaquil');
 <!-- Bootstrap bundle JS -->
 <script src="/gledredes/assets/js/bootstrap.bundle.min.js"></script>
 <!--plugins-->
-<script src="/gledredes/assets/js/jquery.min.js"></script>
+
 
 <script src="/gledredes/assets/plugins/simplebar/js/simplebar.min.js"></script>
 <script src="/gledredes/assets/plugins/metismenu/js/metisMenu.min.js"></script>

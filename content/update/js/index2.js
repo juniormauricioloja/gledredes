@@ -14,7 +14,7 @@ function upload(string){
         processData:false,
         data:datosForm,
         url:'controller/updateController.php',
-        beforeSend:function(xhs){
+        beforeSend:function(xhr){
             $("#ajaxBusy").show();
         },
         success:function(data){
