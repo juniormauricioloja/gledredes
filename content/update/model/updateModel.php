@@ -32,8 +32,8 @@ function uploadFile($programa)
             WHERE TB2.id=TB1.id;";
     $result = mysqli_query($conection, $sqlUpdate);
     
-    $sqlTruncate = "TRUNCATE TABLE `dbcontenidoredes`";
-    $resultsql = mysqli_query($conection, $sqlTruncate);
+    //$sqlTruncate = "TRUNCATE TABLE `dbcontenidoredes`";
+    //$resultsql = mysqli_query($conection, $sqlTruncate);
 
     return $result;
 }
