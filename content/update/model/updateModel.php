@@ -15,7 +15,7 @@ function updateTemp($id, $year, $semana, $mes, $fecha, $objetivo, $status, $herr
     $sqlUpload="INSERT INTO `dbcontenidoredes`(`id`, `year`, `mes`, `semana`, `fecha`, `pais`, `objetivo`, `herramienta`, `colaboracion`, `post`, `contenido`, `redsocial`, `topico`, `facebook`, `instagram`, `tiktok`, `linkedin`, `otros`, `linkblog`, `linkrrss`, `linkweb`, `linkform`, `linkyoutube`, `arte`, `logos`, `comentario`, `alcance`, `megusta`, `compartir`, `punt_alcance`, `punt_megusta`, `punt_compartir`, `puntuacion`, `status`, `responsable`) 
     VALUES $string";
     $result = mysqli_query($conection, $sqlUpload);
-    return $result;
+    return "string=".$string." result=".$result;
 }
 
 function uploadFile($programa)
