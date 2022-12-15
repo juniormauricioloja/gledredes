@@ -15,14 +15,14 @@ function updateTemp($id, $year, $semana, $mes, $fecha, $objetivo, $status, $herr
     $sqlUpload="INSERT INTO `dbcontenidoredes`(`id`, `year`, `mes`, `semana`, `fecha`, `pais`, `objetivo`, `herramienta`, `colaboracion`, `post`, `contenido`, `redsocial`, `topico`, `facebook`, `instagram`, `tiktok`, `linkedin`, `otros`, `linkblog`, `linkrrss`, `linkweb`, `linkform`, `linkyoutube`, `arte`, `logos`, `comentario`, `alcance`, `megusta`, `compartir`, `punt_alcance`, `punt_megusta`, `punt_compartir`, `puntuacion`, `status`, `responsable`) 
     VALUES $string";
     $result = mysqli_query($conection, $sqlUpload);
-    return "string=".$string." result=".$result;
+    return "string=".$string." result=".$result."numerofilas=".$numeroFilas;
 }
 
 function uploadFile($programa)
 {
     include "../../../models/conection.php";
     
-    $sqlUpdate = "UPDATE `dbcontenidoredeshey` AS TB1, `dbcontenidoredesupper` AS TB2 SET TB2.year=TB1.year, TB2.mes=TB1.mes, TB2.mes=TB1.mes,
+    $sqlUpdate = "UPDATE `dbcontenidoredes` AS TB1, `dbcontenidoredes".$programa."` AS TB2 SET TB2.year=TB1.year, TB2.mes=TB1.mes, TB2.mes=TB1.mes,
             TB2.semana=TB1.semana, TB2.fecha=TB1.fecha, TB2.objetivo=TB1.objetivo, TB2.herramienta=TB1.herramienta,
             TB2.colaboracion=TB1.colaboracion, TB2.post=TB1.post, TB2.contenido=TB1.contenido, TB2.redsocial=TB1.redsocial,
             TB2.topico=TB1.topico, TB2.facebook=TB1.facebook, TB2.instagram=TB1.instagram, TB2.tiktok=TB1.tiktok, TB2.linkedin=TB1.linkedin,
@@ -33,8 +33,8 @@ function uploadFile($programa)
             WHERE TB2.id=TB1.id;";
     $result = mysqli_query($conection, $sqlUpdate);
     
-    //$sqlTruncate = "TRUNCATE TABLE `dbcontenidoredes`";
-    //$resultsql = mysqli_query($conection, $sqlTruncate);
+    $sqlTruncate = "TRUNCATE TABLE `dbcontenidoredes`";
+    $resultsql = mysqli_query($conection, $sqlTruncate);
 
     return $result;
 }
