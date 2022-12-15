@@ -541,24 +541,34 @@ if($aux == "searchHey")
   ?>
     <table class="display table table-hover table-striped" style="width: 100%;" id="tableRedes">
       <thead>
-  
         <tr>
-          
-          <th>STATUS</th>
-          <th>PAIS</th>
-          <th>AÑO</th>
-          <th>MES</th>
-          <th>SEMANA</th>
-          <th>FECHA</th>
-          <th>OBJETIVO</th>
-          <th>HERRAMIENTA</th>
-          <th>COLABORACIÓN</th>
-          <th>COPY POST</th>
-          <th>CONTENIDO</th>
-          <th>RED SOCIAL</th>
-          <th>COMENTARIO</th>
-          <th>PUNTUACION</th>
-          <th>RESPONSABLE</th>
+        <th hidden>ID</th>
+        <th>AÑO</th>
+        <th>SEMANA</th>
+        <th>MES</th>
+        <th>DIA</th>
+
+        <th>OBJETIVO</th>
+        <th>STATUS</th>
+        <th>HERRAMIENTA</th>
+        <th>COLABORACIÓN</th>
+
+        <th>RED SOCIAL</th>
+        <th>TOPICO</th>
+        <th>COPY POST</th>
+        <th>CONTENIDO</th>
+
+        <th>LINKS BLOG</th>
+        <th>LINKS RRSS</th>
+        <th>LINKS WEB</th>
+        <th>LINKS FORMULARIO</th>
+        <th>LINKS VIDEOS YOUTUBE</th>
+        <th>ARTE</th>
+        <th>LOGO</th>
+        <th>COMENTARIOS</th>
+        <th>RESPONSABLE</th>
+        <th>PUNTUACION</th>
+
         </tr>
       </thead>
       <tbody>
@@ -566,23 +576,32 @@ if($aux == "searchHey")
           <?php
           foreach ($listaPerfiles as $auxLista) {
           ?>
-            
-  
-            <td><?php echo $auxLista["status"]; ?></td>
-            <td><?php echo $auxLista["pais"]; ?></td>
+            <td hidden><?php echo $auxLista["id"]; ?></td>
             <td><?php echo $auxLista["year"]; ?></td>
-            <td><?php echo $auxLista["mes"]; ?></td>
             <td><?php echo $auxLista["semana"]; ?></td>
+            <td><?php echo $auxLista["mes"]; ?></td>
             <td><?php echo $auxLista["fecha"]; ?></td>
+
             <td><?php echo $auxLista["objetivo"]; ?></td>
+            <td><?php echo $auxLista["status"]; ?></td>
             <td><?php echo $auxLista["herramienta"]; ?></td>
             <td><?php echo $auxLista["colaboracion"]; ?></td>
+
+            <td><?php echo $auxLista["redsocial"]; ?></td>
+            <td><?php echo $auxLista["topico"]; ?></td>
             <td><?php echo $auxLista["post"]; ?></td>
             <td><?php echo $auxLista["contenido"]; ?></td>
-            <td><?php echo $auxLista["redsocial"]; ?></td>
+
+            <td><?php echo $auxLista["linkblog"]; ?></td>
+            <td><?php echo $auxLista["linkrrss"]; ?></td>
+            <td><?php echo $auxLista["linkweb"]; ?></td>
+            <td><?php echo $auxLista["linkform"]; ?></td>
+            <td><?php echo $auxLista["linkyoutube"]; ?></td>
+            <td><?php echo $auxLista["arte"]; ?></td>
+            <td><?php echo $auxLista["logos"]; ?></td>
             <td><?php echo $auxLista["comentario"]; ?></td>
-            <td><?php echo $auxLista["puntuacion"]; ?></td>
             <td><?php echo $auxLista["responsable"]; ?></td>
+            <td><?php echo $auxLista["puntuacion"]; ?></td>
         </tr>
       <?php
           }
@@ -590,10 +609,4 @@ if($aux == "searchHey")
       </tbody>
     </table>
     <?php
-}
-
-if($aux == "deleteRed"){
-  $idaux=$_POST["idaux"];
-  $result=deleteRed($idaux);
-  echo $result;
 }
