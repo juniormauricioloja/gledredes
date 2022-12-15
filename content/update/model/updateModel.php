@@ -14,7 +14,7 @@ function updateTemp($valor1, $valor2, $valor3, $valor4, $valor5, $valor6, $valor
     $sqlUpload = "INSERT INTO `dbcontenidoredes`(`id`,`year`, `semana`, `mes`, `fecha`, `objetivo`, `status`, `herramienta`, `colaboracion`, `redsocial`, `topico`,`post`, `contenido`,  `linkblog`, `linkrrss`, `linkweb`, `linkform`, `linkyoutube`, `arte`, `logos`, `comentario`, `responsable`)
     VALUES $string";
     $result = mysqli_query($conection, $sqlUpload);
-    return "temp=" . $result;
+    return "temp=" . $valor1[0];
 }
 
 function uploadFile($programa)
