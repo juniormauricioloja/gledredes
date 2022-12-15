@@ -47,7 +47,7 @@ function uploadfile(string){
             if(data){
                 success_noti("Archivo subido");
                 console.log(data)
-                //window.location.href="../"+programa+"/index.php";
+                window.location.href="../"+programa+"/index.php";
             }else{
                 error_noti("Error al cargar el archivo");
                 console.log(data)
