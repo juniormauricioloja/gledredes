@@ -35,9 +35,10 @@ if(isset($_FILES["file"]))
             $valor4[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(4,$indiceFila);
 
             //$excelTimestamp1 = $hojaActual->getCellByColumnAndRow(5,$indiceFila)->getValue(); //valor recogido de la celda del archivo excel
-            $excelTimestamp = $hojaActual->getCellByColumnAndRow(5,$indiceFila)->getValue();
-            $aux = Date::excelToDateTimeObject($excelTimestamp);
-            $valor5[$indiceFila-3] = $aux->format('Y-m-d');
+            //$excelTimestamp = $hojaActual->getCellByColumnAndRow(5,$indiceFila)->getValue();
+            //$aux = Date::excelToDateTimeObject($excelTimestamp);
+            //$valor5[$indiceFila-3] = $aux->format('Y-m-d');
+            $valor5[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(5,$indiceFila);
             $valor6[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(6,$indiceFila);
             $valor7[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(7,$indiceFila);
             $valor8[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(8,$indiceFila); 
