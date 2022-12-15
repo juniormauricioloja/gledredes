@@ -10,10 +10,8 @@ function upload(string){
 
     $.ajax({
         type: "POST",
-        dataType: "html",
+        contentType:false,
         processData:false,
-        cache: false,
-        contentType: false,
         data:datosForm,
         url:'controller/updateController.php',
 
