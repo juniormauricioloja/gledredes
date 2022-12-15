@@ -11,17 +11,16 @@ function updateTemp($valor1, $valor2, $valor3, $valor4, $valor5, $valor6, $valor
             $string = $string . ",('$valor1[$i]','$valor2[$i]','$valor3[$i]','$valor4[$i]','$valor5[$i]','$valor6[$i]','$valor7[$i]','$valor8[$i]','$valor9[$i]','$valor10[$i]','$valor11[$i]','$valor12[$i]','$valor13[$i]','$valor14[$i]','$valor15[$i]','$valor16[$i]','$valor17[$i]','$valor18[$i]','$valor19[$i]','$valor20[$i]','$valor21[$i]','$valor22[$i]')";
         }
     }
-    $sqlUpload = "INSERT INTO `dbcontenidoredes`(`id`,`year`, `semana`, `mes`, `fecha`, `objetivo`, `status`, `herramienta`, `colaboracion`, `redsocial`, `topico`,`post`, `contenido`,  `linkblog`, `linkrrss`, `linkweb`, `linkform`, `linkyoutube`, `arte`, `logos`, `comentario`, `responsable`)
-    VALUES $string";
+    $sqlUpload = "INSERT INTO `dbcontenidoredes`(`id`,`year`, `semana`, `mes`, `fecha`, `objetivo`, `status`, `herramienta`, `colaboracion`, `redsocial`, `topico`,`post`, `contenido`,  `linkblog`, `linkrrss`, `linkweb`, `linkform`, `linkyoutube`, `arte`, `logos`, `comentario`, `responsable`) VALUES $string";
     $result = mysqli_query($conection, $sqlUpload);
-    return $result;
+    return $string;
 }
 
 function uploadFile($programa)
 {
     include "../../../models/conection.php";
     
-    $sqlUpdate = "UPDATE `dbcontenidoredes` AS TB1, `dbcontenidoredesupper` AS TB2 SET TB2.year=TB1.year, TB2.mes=TB1.mes, TB2.mes=TB1.mes,
+    $sqlUpdate = "UPDATE `dbcontenidoredeshey` AS TB1, `dbcontenidoredesupper` AS TB2 SET TB2.year=TB1.year, TB2.mes=TB1.mes, TB2.mes=TB1.mes,
             TB2.semana=TB1.semana, TB2.fecha=TB1.fecha, TB2.objetivo=TB1.objetivo, TB2.herramienta=TB1.herramienta,
             TB2.colaboracion=TB1.colaboracion, TB2.post=TB1.post, TB2.contenido=TB1.contenido, TB2.redsocial=TB1.redsocial,
             TB2.topico=TB1.topico, TB2.facebook=TB1.facebook, TB2.instagram=TB1.instagram, TB2.tiktok=TB1.tiktok, TB2.linkedin=TB1.linkedin,
