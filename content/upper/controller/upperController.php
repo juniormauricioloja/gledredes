@@ -183,7 +183,6 @@ function consultaPaisesAdmin($pais)
                 </button>
                 </form>
               </td>
-
             </table>
 
           </td>
