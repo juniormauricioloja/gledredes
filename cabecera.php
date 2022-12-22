@@ -130,15 +130,49 @@ if (isset($_SESSION['user'])) {
                 </a>
             </li>
 
+            <li>
+                <a href="/gledredes/content/gled/index.php">
+                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="menu-title">Gled</div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/gledredes/content/educa/index.php">
+                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="menu-title">Educa</div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/gledredes/content/letstalk/index.php">
+                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="menu-title">Let's Talk</div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/gledredes/content/enrollu/index.php">
+                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="menu-title">Enroll U</div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/gledredes/content/kaplan/index.php">
+                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="menu-title">Kaplan Medical</div>
+                </a>
+            </li>
+
 
         </ul>
         <!--end navigation-->
     </aside>
-    <!--end sidebar -->
+    <!--end sidebar-->
 
 <?php
 } else {
-
     echo "<script>window.location.href='../index.php';</script>";
     exit;
 }

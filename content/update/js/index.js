@@ -73,6 +73,21 @@ function regresar(string){
         case 'hey':
             window.location.href="../hey/index.php";
             break;
+        case 'educa':
+            window.location.href="../educa/index.php";
+            break;
+        case 'letstalk':
+            window.location.href="../letstalk/index.php";
+            break;
+        case 'enrollu':
+            window.location.href="../enrollu/index.php";
+            break;
+        case 'gled':
+            window.location.href="../gled/index.php";
+            break;
+        case 'kaplan':
+            window.location.href="../kaplan/index.php";
+            break;
         default:
             break;
     }
