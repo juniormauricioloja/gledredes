@@ -35,37 +35,27 @@ function consultaPaises($pais)
         foreach ($listaPerfiles as $auxLista) {
 
           $state = $auxLista["status"];
-          switch ($state){
+          switch ($state) {
             case "EN PROCESO":
-              $auxEstado2 = "badge bg-info";
+              $auxEstado2 = "btn btn-outline-info btn-sm mr-1";
               break;
             case "APROBADO":
-              $auxEstado2 = "badge bg-success";
+              $auxEstado2 = "btn btn-outline-success btn-sm mr-1";
               break;
             case "EJECUTADO":
-              $auxEstado2 = "badge bg-primary";
+              $auxEstado2 = "btn btn-outline-primary btn-sm mr-1";
               break;
             case "EVALUADO":
-              $auxEstado2 = "badge bg-secondary";
+              $auxEstado2 = "btn btn-outline-secondary btn-sm mr-1";
               break;
-            default :
+            default:
               break;
           }
         ?>
           <td>
             <table>
 
-              <td>
-                <button class="btn btn-outline-secondary btn-sm mr-1" onclick="modify('<?php echo $auxLista["id"]; ?>');">
-                  <form action="index.php" method="POST">
-                    <input name="id" value="<?php echo $auxLista["id"]; ?>" type="hidden" id="id">
-                    <span class="bi bi-arrow-clockwise"></span>
-                  </form>
-                </button>
-              </td>
-
-
-              <td>
+                <td>
                 <form action="editupper.php" method="POST">
                   <input name="id" value="<?php echo $auxLista["id"]; ?>" type="hidden" id="id">
                   <button class="btn btn-outline-secondary btn-sm mr-1" type="submit">
@@ -77,7 +67,19 @@ function consultaPaises($pais)
 
           </td>
 
+          <!--
           <td class="<?php echo $auxEstado2; ?>"><?php echo $auxLista["status"]; ?></td>
+        -->
+
+          <td id="<?php echo $auxLista["id"]; ?>">
+            <button class="<?php echo $auxEstado2 ?>" onclick="modify('<?php echo $auxLista["id"]; ?>');">
+              <form action="" method="POST">
+                <input name="id" value="<?php echo $auxLista["id"]; ?>" type="hidden" id="id">
+                <span class=""><?php echo $auxLista["status"];  ?></span>
+              </form>
+            </button>
+          </td>
+
           <td><?php echo $auxLista["pais"]; ?></td>
           <td><?php echo $auxLista["year"]; ?></td>
           <td><?php echo $auxLista["mes"]; ?></td>
@@ -98,7 +100,7 @@ function consultaPaises($pais)
     ?>
     </tbody>
   </table>
-  <?php
+<?php
 
 }
 
@@ -136,34 +138,27 @@ function consultaPaisesAdmin($pais)
         foreach ($listaPerfiles as $auxLista) {
 
           $state = $auxLista["status"];
-          switch ($state){
+          switch ($state) {
             case "EN PROCESO":
-              $auxEstado2 = "badge bg-info";
+              $auxEstado2 = "btn btn-outline-info btn-sm mr-1";
               break;
             case "APROBADO":
-              $auxEstado2 = "badge bg-success";
+              $auxEstado2 = "btn btn-outline-success btn-sm mr-1";
               break;
             case "EJECUTADO":
-              $auxEstado2 = "badge bg-primary";
+              $auxEstado2 = "btn btn-outline-primary btn-sm mr-1";
               break;
             case "EVALUADO":
-              $auxEstado2 = "badge bg-secondary";
+              $auxEstado2 = "btn btn-outline-secondary btn-sm mr-1";
               break;
-            default :
+            default:
               break;
           }
         ?>
           <td>
             <table>
 
-              <td>
-                <button class="btn btn-outline-secondary btn-sm mr-1" onclick="modify('<?php echo $auxLista["id"]; ?>');">
-                  <form action="index.php" method="POST">
-                    <input name="id" value="<?php echo $auxLista["id"]; ?>" type="hidden" id="id">
-                    <span class="bi bi-arrow-clockwise"></span>
-                  </form>
-                </button>
-              </td>
+              
 
               <td>
                 <form action="editupper.php" method="POST">
@@ -186,8 +181,19 @@ function consultaPaisesAdmin($pais)
             </table>
 
           </td>
-
+          <!--
           <td class="<?php echo $auxEstado2; ?>"><?php echo $auxLista["status"]; ?></td>
+          -->
+
+          <td id="<?php echo $auxLista["id"]; ?>">
+            <button class="<?php echo $auxEstado2 ?>" onclick="modify('<?php echo $auxLista["id"]; ?>');">
+              <form action="" method="POST">
+                <input name="id" value="<?php echo $auxLista["id"]; ?>" type="hidden" id="id">
+                <span class=""><?php echo $auxLista["status"];  ?></span>
+              </form>
+            </button>
+          </td>
+
           <td><?php echo $auxLista["pais"]; ?></td>
           <td><?php echo $auxLista["year"]; ?></td>
           <td><?php echo $auxLista["mes"]; ?></td>
@@ -285,10 +291,10 @@ if ($aux == "searchState") {
                 <button type="button" class="btn btn-success" onclick="modalAprobar('APROBAR');">APROBADO</button>
               </div>
               <div class="col">
-                <button type="button" class="btn btn-success" onclick="modalAprobar('EJECUTAR');">EJECUTADO</button>
+                <button type="button" class="btn btn-primary" onclick="modalAprobar('EJECUTAR');">EJECUTADO</button>
               </div>
               <div class="col">
-                <button type="button" class="btn btn-success" onclick="modalAprobar('EVALUAR');">EVALUADO</button>
+                <button type="button" class="btn btn-secondary" onclick="modalAprobar('EVALUAR');">EVALUADO</button>
               </div>
             </div>
 
@@ -312,10 +318,10 @@ if ($aux == "searchState") {
             <div class="form-group row justify-content-center">
 
               <div class="col">
-                <button type="button" class="btn btn-success" onclick="modalAprobar('EJECUTAR');">EJECUTADO</button>
+                <button type="button" class="btn btn-primary" onclick="modalAprobar('EJECUTAR');">EJECUTADO</button>
               </div>
               <div class="col">
-                <button type="button" class="btn btn-success" onclick="modalAprobar('EVALUAR');">EVALUADO</button>
+                <button type="button" class="btn btn-secondary" onclick="modalAprobar('EVALUAR');">EVALUADO</button>
               </div>
             </div>
 
@@ -342,7 +348,7 @@ if ($aux == "searchState") {
                 <button type="button" class="btn btn-success" onclick="modalAprobar('APROBAR');">APROBADO</button>
               </div>
               <div class="col">
-                <button type="button" class="btn btn-success" onclick="modalAprobar('EVALUAR');">EVALUADO</button>
+                <button type="button" class="btn btn-secondary" onclick="modalAprobar('EVALUAR');">EVALUADO</button>
               </div>
             </div>
 
@@ -366,7 +372,7 @@ if ($aux == "searchState") {
                 <button type="button" class="btn btn-success" onclick="modalAprobar('APROBAR');">APROBADO</button>
               </div>
               <div class="col">
-                <button type="button" class="btn btn-success" onclick="modalAprobar('EJECUTAR');">EJECUTADO</button>
+                <button type="button" class="btn btn-primary" onclick="modalAprobar('EJECUTAR');">EJECUTADO</button>
               </div>
             </div>
 
@@ -409,7 +415,7 @@ if ($aux == "mostrarInfo") {
           <br>
           <div class="form-group row justify-content-center">
             <div class="col">
-              <button type="button" class="btn btn-success" onclick="ejecutado();">Marcar como Ejecutado</button>
+              <button type="button" class="btn btn-primary" onclick="ejecutado();">Marcar como Ejecutado</button>
             </div>
           </div>
         </div>
@@ -446,13 +452,13 @@ if ($aux == "mostrarInfo") {
 
           <div class="form-group row justify-content-center">
             <div class="col">
-              <button type="button" class="btn btn-success" onclick="puntuacion();">Agregar Puntuación</button>
+              <button type="button" class="btn btn-secondary" onclick="puntuacion();">Agregar Puntuación</button>
             </div>
           </div>
         </div>
       </div>
 
-<?php
+  <?php
       break;
   }
 }
@@ -502,7 +508,7 @@ if ($aux == "update") {
   $comentario = $_POST["comentario"];
   $responsable = $_POST["responsable"];
 
-  $alcance=$_POST["alcance"];
+  $alcance = $_POST["alcance"];
   $megusta = $_POST["megusta"];
   $compartir = $_POST["compartir"];
   $puntuacion = $_POST["puntuacion"];
@@ -527,7 +533,10 @@ if ($aux == "update") {
     $arte,
     $comentario,
     $responsable,
-    $alcance,$megusta,$compartir,$puntuacion
+    $alcance,
+    $megusta,
+    $compartir,
+    $puntuacion
   );
 
   echo $update;
@@ -546,26 +555,25 @@ if ($aux == "addRedSocial") {
       $otros = $rowData["otros"];
     }
 
-    $consulta = array("facebook" => $facebook , "instagram" => $instagram, "tiktok" => $tiktok, "linkedin" => $linkedin, "otros" => $otros);
+    $consulta = array("facebook" => $facebook, "instagram" => $instagram, "tiktok" => $tiktok, "linkedin" => $linkedin, "otros" => $otros);
     echo json_encode($consulta);
   } else {
     echo false;
   }
 }
 
-if($aux == "searchUpper")
-{
+if ($aux == "searchUpper") {
   $pais = $_POST["pais"];
   $responsable = $_POST["responsable"];
   $status = $_POST["status"];
   $startDate = $_POST["startDate"];
   $endDate = $_POST["endDate"];
-  $listaPerfiles = searchUpper($pais,$responsable,$status,$startDate,$endDate);
+  $listaPerfiles = searchUpper($pais, $responsable, $status, $startDate, $endDate);
   ?>
-    <table class="display table table-hover table-striped" style="width: 100%;" id="tableRedes">
-      <thead>
-  
-        <tr>
+  <table class="display table table-hover table-striped" style="width: 100%;" id="tableRedes">
+    <thead>
+
+      <tr>
         <th hidden>ID</th>
         <th>AÑO</th>
         <th>SEMANA</th>
@@ -593,50 +601,50 @@ if($aux == "searchUpper")
         <th>RESPONSABLE</th>
         <th>PUNTUACION</th>
 
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <?php
-          foreach ($listaPerfiles as $auxLista) {
-          ?>
-            <td hidden><?php echo $auxLista["id"]; ?></td>
-            <td><?php echo $auxLista["year"]; ?></td>
-            <td><?php echo $auxLista["semana"]; ?></td>
-            <td><?php echo $auxLista["mes"]; ?></td>
-            <td><?php echo $auxLista["fecha"]; ?></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <?php
+        foreach ($listaPerfiles as $auxLista) {
+        ?>
+          <td hidden><?php echo $auxLista["id"]; ?></td>
+          <td><?php echo $auxLista["year"]; ?></td>
+          <td><?php echo $auxLista["semana"]; ?></td>
+          <td><?php echo $auxLista["mes"]; ?></td>
+          <td><?php echo $auxLista["fecha"]; ?></td>
 
-            <td><?php echo $auxLista["objetivo"]; ?></td>
-            <td><?php echo $auxLista["status"]; ?></td>
-            <td><?php echo $auxLista["herramienta"]; ?></td>
-            <td><?php echo $auxLista["colaboracion"]; ?></td>
+          <td><?php echo $auxLista["objetivo"]; ?></td>
+          <td><?php echo $auxLista["status"]; ?></td>
+          <td><?php echo $auxLista["herramienta"]; ?></td>
+          <td><?php echo $auxLista["colaboracion"]; ?></td>
 
-            <td><?php echo $auxLista["redsocial"]; ?></td>
-            <td><?php echo $auxLista["topico"]; ?></td>
-            <td><?php echo $auxLista["post"]; ?></td>
-            <td><?php echo $auxLista["contenido"]; ?></td>
+          <td><?php echo $auxLista["redsocial"]; ?></td>
+          <td><?php echo $auxLista["topico"]; ?></td>
+          <td><?php echo $auxLista["post"]; ?></td>
+          <td><?php echo $auxLista["contenido"]; ?></td>
 
-            <td><?php echo $auxLista["linkblog"]; ?></td>
-            <td><?php echo $auxLista["linkrrss"]; ?></td>
-            <td><?php echo $auxLista["linkweb"]; ?></td>
-            <td><?php echo $auxLista["linkform"]; ?></td>
-            <td><?php echo $auxLista["linkyoutube"]; ?></td>
-            <td><?php echo $auxLista["arte"]; ?></td>
-            <td><?php echo $auxLista["logos"]; ?></td>
-            <td><?php echo $auxLista["comentario"]; ?></td>
-            <td><?php echo $auxLista["responsable"]; ?></td>
-            <td><?php echo $auxLista["puntuacion"]; ?></td>
-        </tr>
-      <?php
-          }
-      ?>
-      </tbody>
-    </table>
+          <td><?php echo $auxLista["linkblog"]; ?></td>
+          <td><?php echo $auxLista["linkrrss"]; ?></td>
+          <td><?php echo $auxLista["linkweb"]; ?></td>
+          <td><?php echo $auxLista["linkform"]; ?></td>
+          <td><?php echo $auxLista["linkyoutube"]; ?></td>
+          <td><?php echo $auxLista["arte"]; ?></td>
+          <td><?php echo $auxLista["logos"]; ?></td>
+          <td><?php echo $auxLista["comentario"]; ?></td>
+          <td><?php echo $auxLista["responsable"]; ?></td>
+          <td><?php echo $auxLista["puntuacion"]; ?></td>
+      </tr>
     <?php
+        }
+    ?>
+    </tbody>
+  </table>
+<?php
 }
 
-if($aux == "deleteRed"){
-  $idaux=$_POST["idaux"];
-  $result=deleteRed($idaux);
+if ($aux == "deleteRed") {
+  $idaux = $_POST["idaux"];
+  $result = deleteRed($idaux);
   echo $result;
 }

@@ -45,6 +45,7 @@ function dataTable(nombreTabla) {
         "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"] ],
         dom: '<l<t>ip>',
         buttons: [],
+        select: true,
         language: {
             "decimal": ",",
             "thousands": ".",
