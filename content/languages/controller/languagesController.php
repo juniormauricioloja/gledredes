@@ -553,7 +553,8 @@ if($aux == "searchLanguages")
   $status = $_POST["status"];
   $startDate = $_POST["startDate"];
   $endDate = $_POST["endDate"];
-  $listaPerfiles = searchLanguages($pais,$responsable,$status,$startDate,$endDate);
+  $order = $_POST["order"];
+  $listaPerfiles = searchLanguages($pais,$responsable,$status,$startDate,$endDate,$order);
   ?>
     <table class="display table table-hover table-striped" style="width: 100%;" id="tableRedes">
       <thead>

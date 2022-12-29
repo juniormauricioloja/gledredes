@@ -10,8 +10,9 @@ function searchUpper(){
     let status = document.getElementById("status").value;
     let startDate = document.getElementById("startDate").value;
     let endDate = document.getElementById("endDate").value;
+    let order = document.getElementById("order").value;
 
-    var cadena = "aux=searchUpper&pais="+pais+"&responsable="+responsable+"&status="+status+"&startDate="+startDate+"&endDate="+endDate;
+    var cadena = "aux=searchUpper&pais="+pais+"&responsable="+responsable+"&status="+status+"&startDate="+startDate+"&endDate="+endDate+"&order="+order;
 
     $.ajax({
         type: "POST",
@@ -40,13 +41,18 @@ function dataTable(nombreTabla) {
         "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"] ],
         dom: '<Bl<t>ip>',
         "scrollX": true,
-        buttons: ['excel',
+        "order": [],
+        buttons: [{
+            extend: 'excel',
+            text: 'Descargar en Excel',
+            title: 'Reporte Upper',
+        },
             {
                 extend: 'pdf',
                 text: 'Descargar en PDF',
                 orientation: 'landscape',
                 title: 'Reporte Upper',
-                pageSize: 'A3',
+                pageSize: 'A2',
                 header: true,
                 footer: false,
             }

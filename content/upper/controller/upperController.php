@@ -568,7 +568,8 @@ if ($aux == "searchUpper") {
   $status = $_POST["status"];
   $startDate = $_POST["startDate"];
   $endDate = $_POST["endDate"];
-  $listaPerfiles = searchUpper($pais, $responsable, $status, $startDate, $endDate);
+  $order = $_POST["order"];
+  $listaPerfiles = searchUpper($pais, $responsable, $status, $startDate, $endDate,$order);
   ?>
   <table class="display table table-hover table-striped" style="width: 100%;" id="tableRedes">
     <thead>

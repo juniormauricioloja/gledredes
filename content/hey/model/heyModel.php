@@ -70,11 +70,12 @@ function consultaredes($id){
     return $result;
 }
 
-function searchHey($pais,$responsable,$status,$startDate,$endDate){
+function searchHey($pais,$responsable,$status,$startDate,$endDate,$order){
     include "../../../models/conection.php";
     $selectPais="";
     $selectResponsable="";
     $selectStatus = "";
+    $selectOrder="";
 
         if($pais != "Todos"){
             $selectPais="AND `pais`='$pais' ";
@@ -85,10 +86,12 @@ function searchHey($pais,$responsable,$status,$startDate,$endDate){
         if($status != "Todos"){
             $selectStatus="AND `status`='$status'";
         }
-
-    $sqlSelect = "SELECT * FROM `dbcontenidoredeshey` WHERE `fecha` BETWEEN '".$startDate."' AND '".$endDate."' ".$selectPais." ".$selectResponsable." ".$selectStatus;
+        if($order != "Ninguno"){
+            $selectOrder="ORDER BY `puntuacion` $order";
+        }
+    $sqlSelect = "SELECT * FROM `dbcontenidoredeshey` WHERE `fecha` BETWEEN '".$startDate."' AND '".$endDate."' ".$selectPais." ".$selectResponsable." ".$selectStatus." ".$selectOrder;
     $result = mysqli_query($conection, $sqlSelect);
-    return $result;  
+    return $result;
 }
 
 function deleteRed($idaux){

@@ -143,7 +143,6 @@ switch ($perfil){
                                         <option value="EVALUADO">EVALUADO</option>
                                         <option value="Todos">Seleccionar Todos</option>
                                     </select>
-
                                 </div>
                                 <div class="col">
                                     <label for="" class="form-control-label">Desde:</label>
@@ -153,6 +152,16 @@ switch ($perfil){
                                 <div class="col">
                                     <label for="" class="form-control-label">Hasta:</label>
                                     <input id="endDate" type="date" class="form-control from-control-lg" >
+                                </div>
+
+                                <div class="col">
+                                    <label for="" class="form-control-label">Puntuación:</label>
+                                    <select name="" id="order" class="form-control from-control-lg">
+                                        <option value="">---Seleccione Orden---</option>
+                                        <option value="ASC">Orden Ascendente</option>
+                                        <option value="DESC">Orden Descentente</option>
+                                        <option value="Ninguno">Ninguno</option>
+                                    </select>
                                 </div>
                             </div>
                             <br>
