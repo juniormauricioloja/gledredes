@@ -49,7 +49,7 @@ switch ($perfil){
                 <br>
                 <br>
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom viewdiv">
-                    <h2 class="h4">Contenido Redes Upper <?php echo $stringPais;?></h2>
+                    <h2 class="h4">Contenido Redes Gled <?php echo $stringPais;?></h2>
 
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <a class="btn btn-sm btn-outline-info" role="button" href="downloadgled.php">

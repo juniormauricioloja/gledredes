@@ -14,10 +14,9 @@ function consultaPaises($pais)
         <th></th>
         <th>STATUS</th>
         <th>PAIS</th>
-        <th>AÑO</th>
-        <th>MES</th>
-        <th>SEMANA</th>
         <th>FECHA</th>
+        <th>SEMANA</th>
+        
         <th>OBJETIVO</th>
         <th>HERRAMIENTA</th>
         <th>COLABORACIÓN</th>
@@ -79,10 +78,9 @@ function consultaPaises($pais)
             </button>
           </td>
           <td><?php echo $auxLista["pais"]; ?></td>
-          <td><?php echo $auxLista["year"]; ?></td>
-          <td><?php echo $auxLista["mes"]; ?></td>
-          <td><?php echo $auxLista["semana"]; ?></td>
           <td><?php echo $auxLista["fecha"]; ?></td>
+          <td><?php echo $auxLista["semana"]; ?></td>
+          
           <td><?php echo $auxLista["objetivo"]; ?></td>
           <td><?php echo $auxLista["herramienta"]; ?></td>
           <td><?php echo $auxLista["colaboracion"]; ?></td>
@@ -115,10 +113,9 @@ function consultaPaisesAdmin($pais)
         <th></th>
         <th>STATUS</th>
         <th>PAIS</th>
-        <th>AÑO</th>
-        <th>MES</th>
-        <th>SEMANA</th>
         <th>FECHA</th>
+        <th>SEMANA</th>
+        
         <th>OBJETIVO</th>
         <th>HERRAMIENTA</th>
         <th>COLABORACIÓN</th>
@@ -190,10 +187,9 @@ function consultaPaisesAdmin($pais)
             </button>
           </td>
           <td><?php echo $auxLista["pais"]; ?></td>
-          <td><?php echo $auxLista["year"]; ?></td>
-          <td><?php echo $auxLista["mes"]; ?></td>
-          <td><?php echo $auxLista["semana"]; ?></td>
           <td><?php echo $auxLista["fecha"]; ?></td>
+          <td><?php echo $auxLista["semana"]; ?></td>
+          
           <td><?php echo $auxLista["objetivo"]; ?></td>
           <td><?php echo $auxLista["herramienta"]; ?></td>
           <td><?php echo $auxLista["colaboracion"]; ?></td>
@@ -569,10 +565,8 @@ if($aux == "searchGled")
   
         <tr>
         <th hidden>ID</th>
-        <th>AÑO</th>
+        <th>FECHA</th>
         <th>SEMANA</th>
-        <th>MES</th>
-        <th>DIA</th>
 
         <th>OBJETIVO</th>
         <th>STATUS</th>
@@ -603,10 +597,8 @@ if($aux == "searchGled")
           foreach ($listaPerfiles as $auxLista) {
           ?>
             <td hidden><?php echo $auxLista["id"]; ?></td>
-            <td><?php echo $auxLista["year"]; ?></td>
-            <td><?php echo $auxLista["semana"]; ?></td>
-            <td><?php echo $auxLista["mes"]; ?></td>
             <td><?php echo $auxLista["fecha"]; ?></td>
+            <td><?php echo $auxLista["semana"]; ?></td>
 
             <td><?php echo $auxLista["objetivo"]; ?></td>
             <td><?php echo $auxLista["status"]; ?></td>
