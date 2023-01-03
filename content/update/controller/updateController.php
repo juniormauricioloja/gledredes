@@ -29,14 +29,15 @@ if(isset($_FILES["file"]))
         for($indiceFila = 3; $indiceFila<=$numeroFilas; $indiceFila++){
             
             $valor1[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(1,$indiceFila);
-            $valor2[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(2,$indiceFila);
+            $excelTimestamp = $hojaActual->getCellByColumnAndRow(2,$indiceFila)->getValue();
+            $aux = Date::excelToDateTimeObject($excelTimestamp);
+            $valor2[$indiceFila-3] = $aux->format('Y-m-d');
             $valor3[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(3,$indiceFila);
             $valor4[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(4,$indiceFila);
+            $valor5[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(5,$indiceFila);
 
             //$excelTimestamp1 = $hojaActual->getCellByColumnAndRow(5,$indiceFila)->getValue(); //valor recogido de la celda del archivo excel
-            $excelTimestamp = $hojaActual->getCellByColumnAndRow(5,$indiceFila)->getValue();
-            $aux = Date::excelToDateTimeObject($excelTimestamp);
-            $valor5[$indiceFila-3] = $aux->format('Y-m-d');
+            
             //$valor5[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(5,$indiceFila);
             $valor6[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(6,$indiceFila);
             $valor7[$indiceFila-3] = $hojaActual->getCellByColumnAndRow(7,$indiceFila);
@@ -53,8 +54,6 @@ if(isset($_FILES["file"]))
             $valor18[$indiceFila-3]= $hojaActual->getCellByColumnAndRow(18,$indiceFila);
             $valor19[$indiceFila-3]= $hojaActual->getCellByColumnAndRow(19,$indiceFila);
             $valor20[$indiceFila-3]= $hojaActual->getCellByColumnAndRow(20,$indiceFila);
-            $valor21[$indiceFila-3]= $hojaActual->getCellByColumnAndRow(21,$indiceFila);
-            $valor22[$indiceFila-3]= $hojaActual->getCellByColumnAndRow(22,$indiceFila);
             $facebook[$indiceFila-3]=0;
             $instagram[$indiceFila-3]=0;
             $tiktok[$indiceFila-3]=0;
@@ -64,7 +63,7 @@ if(isset($_FILES["file"]))
         }
 
         $uploadFile = updateTemp($valor1,$valor2,$valor3,$valor4,$valor5,$valor6,$valor7,$valor8,$valor9,$valor10,$valor11,$valor12,$valor13,$valor14,$valor15,$valor16
-        ,$valor17,$valor18,$valor19,$valor20,$valor21,$valor22,$numeroFilas);
+        ,$valor17,$valor18,$valor19,$valor20,$numeroFilas);
         echo $uploadFile;
     }else{
         echo false;
