@@ -31,7 +31,7 @@ function update(){
     let comentario = document.getElementById("comentario").value;
     let responsable = document.getElementById("responsable").value;
 
-    if(year == "" || mes == "" || semana =="" || fecha =="" ){
+    if(semana =="" || fecha =="" ){
         if(semana == ""){
             $("#semana").focus();
         }else if(fecha == ""){

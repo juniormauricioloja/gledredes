@@ -474,8 +474,6 @@ if ($aux == "puntuacion") {
 
 if ($aux == "update") {
   $id = $_POST["id"];
-  $year = $_POST["year"];
-  $mes = $_POST["mes"];
   $semana = $_POST["semana"];
   $fecha = $_POST["fecha"];
   $objetivo = $_POST["objetivo"];
@@ -500,8 +498,6 @@ if ($aux == "update") {
 
   $update = update(
     $id,
-    $year,
-    $mes,
     $semana,
     $fecha,
     $objetivo,
