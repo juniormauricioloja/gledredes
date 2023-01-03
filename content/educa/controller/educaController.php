@@ -501,8 +501,6 @@ if ($aux == "update") {
 
   $update = update(
     $id,
-    $year,
-    $mes,
     $semana,
     $fecha,
     $objetivo,

@@ -152,7 +152,7 @@ function consultaPaisesAdmin($pais)
               
 
               <td>
-                <form action="editupper.php" method="POST">
+                <form action="edithey.php" method="POST">
                   <input name="id" value="<?php echo $auxLista["id"]; ?>" type="hidden" id="id">
                   <button class="btn btn-outline-secondary btn-sm mr-1" type="submit">
                     <span class="bi bi-pencil"></span>
@@ -473,8 +473,6 @@ if ($aux == "puntuacion") {
 
 if ($aux == "update") {
   $id = $_POST["id"];
-  $year = $_POST["year"];
-  $mes = $_POST["mes"];
   $semana = $_POST["semana"];
   $fecha = $_POST["fecha"];
   $objetivo = $_POST["objetivo"];
@@ -499,8 +497,6 @@ if ($aux == "update") {
 
   $update = update(
     $id,
-    $year,
-    $mes,
     $semana,
     $fecha,
     $objetivo,

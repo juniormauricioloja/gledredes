@@ -44,7 +44,7 @@ $id = $_POST["id"];
             <?php require_once $path_so; ?>
             <br>
             <br>
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <div class="justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <div class="form-new-lead">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h2 class="h4">Editar</h2>
@@ -71,28 +71,10 @@ $id = $_POST["id"];
 
 
                                     <div class="form-row mb-3">
-                                        <div class="col">
-                                            <label for="" class="form-control-label">Año:</label>
-                                            <input id="year" type="text" class="form-control from-control-lg input-number" value="<?php echo $rol["year"]; ?> ">
-
-                                        </div>
-                                        <div class="col">
-                                            <label for="" class="form-control-label">Mes:</label>
-                                            <select name="" id="mes" class="form-control from-control-lg">
-                                                <option selected value="<?php echo $rol["mes"]; ?> "><?php echo $rol["mes"]; ?></option>
-                                                <option value="Enero">Enero</option>
-                                                <option value="Febrero">Febrero</option>
-                                                <option value="Marzo">Marzo</option>
-                                                <option value="Abril">Abril</option>
-                                                <option value="Mayo">Mayo</option>
-                                                <option value="Junio">Junio</option>
-                                                <option value="Julio">Julio</option>
-                                                <option value="Agosto">Agosto</option>
-                                                <option value="Septiembre">Septiembre</option>
-                                                <option value="Octubre">Octubre</option>
-                                                <option value="Noviembre">Noviembre</option>
-                                                <option value="Diciembre">Diciembre</option>
-                                            </select>   
+                                        
+                                    <div class="col">
+                                            <label for="" class="form-control-label">Fecha:</label>
+                                            <input id="fecha" type="date" class="form-control from-control-lg" value="<?php echo $rol["fecha"];?>">
                                         </div>
                                         <div class="col">
                                             <label for="" class="form-control-label">Semana:</label>
@@ -102,10 +84,7 @@ $id = $_POST["id"];
                                             <label for="" class="form-control-label" hidden>ID:</label>
                                             <input id="id" type="text" class="form-control from-control-lg" value="<?php echo $rol["id"]; ?>" hidden>
                                         </div>
-                                        <div class="col">
-                                            <label for="" class="form-control-label">Fecha:</label>
-                                            <input id="fecha" type="date" class="form-control from-control-lg" value="<?php echo $rol["fecha"];?>">
-                                        </div>
+                                        
                                         <div class="col">
                                             <label for="" class="form-control-label">Pais:</label>
                                             <input id="pais" type="text" class="form-control from-control-lg" value="<?php echo $rol["pais"]; ?>" readonly>

@@ -49,11 +49,11 @@ function puntuacion($id,$alcance,$meGusta, $compartir , $puntuacion)
     return $result;
 }
 
-function update($id,$year, $mes, $semana, $fecha, $objetivo, $herramienta, $colaboracion, $redsocial, $post, $contenido, $linkblog
+function update($id, $semana, $fecha, $objetivo, $herramienta, $colaboracion, $redsocial, $post, $contenido, $linkblog
 ,$linkrrss, $linkweb, $linkform, $linkyoutube, $arte, $comentario, $responsable, $alcance, $megusta, $compartir, $puntuacion){
 
     include "../../../models/conection.php";
-    $sqlUpdate = "UPDATE `dbcontenidoredeseduca` SET `year`='$year',`mes`='$mes',`semana`='$semana',`fecha`='$fecha',
+    $sqlUpdate = "UPDATE `dbcontenidoredeseduca` SET `semana`='$semana',`fecha`='$fecha',
     `objetivo`='$objetivo',`herramienta`='$herramienta',`colaboracion`='$colaboracion',`post`='$post',`contenido`='$contenido',
     `redsocial`='$redsocial',`linkblog`='$linkblog',`linkrrss`='$linkrrss',`linkweb`='$linkweb',`linkform`='$linkform',
     `linkyoutube`='$linkyoutube',`arte`='$arte',`comentario`='$comentario',`responsable`='$responsable' , `alcance`='$alcance', 

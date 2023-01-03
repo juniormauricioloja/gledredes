@@ -8,8 +8,6 @@ $(document).ready(function(){
 function update(){
     let id = document.getElementById("id").value;
 
-    let year = document.getElementById("year").value;
-    let mes = document.getElementById("mes").value;
     let semana = document.getElementById("semana").value;
     let fecha = document.getElementById("fecha").value;
     let objetivo = document.getElementById("objetivo").value;
@@ -34,11 +32,7 @@ function update(){
     let responsable = document.getElementById("responsable").value;
 
     if(year == "" || mes == "" || semana =="" || fecha =="" ){
-        if(year == ""){
-            $("#year").focus();
-        }else if(mes == ""){
-            $("#mes").focus();
-        }else if(semana == ""){
+        if(semana == ""){
             $("#semana").focus();
         }else if(fecha == ""){
             $("#fecha").focus();
@@ -46,7 +40,7 @@ function update(){
         error_noti("Complete los campos faltantes");
     }else{
 
-    var cadena = "aux=update&year="+year+"&id="+id+"&mes="+mes+"&semana="+semana+"&fecha="+fecha+"&objetivo="+objetivo+"&herramienta="+herramienta+
+    var cadena = "aux=update&id="+id+"&semana="+semana+"&fecha="+fecha+"&objetivo="+objetivo+"&herramienta="+herramienta+
     "&colaboracion="+colaboracion+"&redsocial="+redsocial+"&post="+post+"&contenido="+contenido+"&linkblog="+linkblog+"&linkrrss="+linkrrss+
     "&linkweb="+linkweb+"&linkform="+linkform+"&linkyoutube="+linkyoutube+"&arte="+arte+"&comentario="+comentario+"&responsable="+responsable+
     "&alcance="+alcance+"&megusta="+megusta+"&compartir="+compartir+"&puntuacion="+puntuacion;
