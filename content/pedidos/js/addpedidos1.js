@@ -69,9 +69,11 @@ const datos=()=>{
                 document.getElementById('comentarios').value='';
 
                 success_noti("Pedido Guardado");
+                console.log(result);
            
             } else if (result == false) {
                 error_noti("Error al crear el registro/Nombre repetido");
+                console.log(result);
             } else {
                 error_noti("Error");
                 

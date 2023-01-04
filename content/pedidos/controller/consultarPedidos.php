@@ -142,37 +142,37 @@ if ($aux=="consultarPedido"){
              
           </th>
           
-        <td><?php echo $auxLista["Requerimiento"]; ?></td>
-        <td><?php echo $auxLista["Tipo"]; ?></td>
-        <td><?php echo $auxLista["Ubicación"]; ?></td>
+        <td><?php echo $auxLista["requerimiento"]; ?></td>
+        <td><?php echo $auxLista["tipo"]; ?></td>
+        <td><?php echo $auxLista["ubicación"]; ?></td>
         <!-- <td><?php #echo $auxLista["yearins"]; ?></td>
         <td><?php #echo $auxLista["mesins"]; ?></td> -->
-        <td><?php echo $auxLista["Formato"]; ?></td>
+        <td><?php echo $auxLista["formato"]; ?></td>
         <!--<td><?php #echo $auxLista["yearcax"]; ?></td>
         <td><?php #echo $auxLista["mescax"]; ?></td>
         <td><?php #echo $auxLista["razon"]; ?></td> -->
-        <td><?php echo $auxLista["Medidas o Pixeles"]; ?></td>
-        <td><?php echo $auxLista["Duración [seg]"]; ?></td>
-        <td><?php echo $auxLista["Objetivo"]; ?></td>
+        <td><?php echo $auxLista["medidas"]; ?></td>
+        <td><?php echo $auxLista["duracion"]; ?></td>
+        <td><?php echo $auxLista["objetivo"]; ?></td>
         <!-- <td><?php #echo $auxLista["yearv"]; ?></td>
         <td><?php #echo $auxLista["mesv"]; ?></td> -->
-        <td><?php echo $auxLista["Target"]; ?></td>
-        <td><?php echo $auxLista["Look&Feel"]; ?></td>
-        <td><?php echo $auxLista["Texto"]; ?></td>
-        <td><?php echo $auxLista["Solicitante"]; ?></td>
-        <td><?php echo $auxLista["Fecha Solicitud"]; ?></td>
-        <td><?php echo $auxLista["Responsable"]; ?></td>
-        <td><?php echo $auxLista["Avance"]; ?></td>
-        <td><?php echo $auxLista["Fecha Entrega"]; ?></td>
-        <td><?php echo $auxLista["Links"]; ?></td>
-        <td><?php echo $auxLista["Archivos"]; ?></td>
-        <td><?php echo $auxLista["Comentarios"]; ?></td>
-        <td><?php echo $auxLista["Empresa"]; ?></td>
-        <td><?php echo $auxLista["Unidad"]; ?></td>
-        <td><?php echo $auxLista["País"]; ?></td>
-        <td><?php echo $auxLista["Horas"]; ?></td>
-        <td><?php echo $auxLista["Nombre Campaña"]; ?></td>
-        <td><?php echo $auxLista["Costos"]; ?></td>
+        <td><?php echo $auxLista["target"]; ?></td>
+        <td><?php echo $auxLista["lookfeel"]; ?></td>
+        <td><?php echo $auxLista["texto"]; ?></td>
+        <td><?php echo $auxLista["solicitante"]; ?></td>
+        <td><?php echo $auxLista["fechasolicitud"]; ?></td>
+        <td><?php echo $auxLista["responsable"]; ?></td>
+        <td><?php echo $auxLista["avance"]; ?></td>
+        <td><?php echo $auxLista["fechaentrega"]; ?></td>
+        <td><?php echo $auxLista["links"]; ?></td>
+        <td><?php echo $auxLista["archivos"]; ?></td>
+        <td><?php echo $auxLista["comentarios"]; ?></td>
+        <td><?php echo $auxLista["empresa"]; ?></td>
+        <td><?php echo $auxLista["unidad"]; ?></td>
+        <td><?php echo $auxLista["pais"]; ?></td>
+        <td><?php echo $auxLista["horas"]; ?></td>
+        <td><?php echo $auxLista["campana"]; ?></td>
+        <td><?php echo $auxLista["costos"]; ?></td>
         <!-- <td><?php #echo $auxLista["total_invoice"]; ?></td>
         <td><?php #echo $auxLista["total_net"]; ?></td>
         <td><?php #echo $auxLista["exchange_rate_average"]; ?></td>

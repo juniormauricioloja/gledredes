@@ -11,9 +11,9 @@ function leads($pais,$empresa,$unidad,$requerimiento,$objetivo,$tipo, $ubicacion
                 $comentarios){
     include "../../../models/conection.php";
     
-    $sqlInsertar = "INSERT INTO `order_prod`(`Requerimiento`, `Tipo`, `Ubicación`, `Formato`, `Medidas o Pixeles`, `Duración [seg]`, `Objetivo`, 
-    `Target`, `Look&Feel`, `Texto`, `Solicitante`, `Fecha Solicitud`, `Responsable`, `Avance`, `Fecha Entrega`, `Links`, `Archivos`, 
-    `Comentarios`, `Empresa`, `Unidad`, `País`, `Horas`, `Nombre Campaña`, `Costos`) VALUES ('$requerimiento','$tipo','$ubicacion','$formato',
+    $sqlInsertar = "INSERT INTO `order_prod`(`requerimiento`, `tipo`, `ubicacion`, `formato`, `medidas`, `duracion`, `objetivo`, 
+    `Target`, `lookfeel`, `texto`, `solicitante`, `fechasolicitud`, `responsable`, `avance`, `fechaentrega`, `links`, `archivos`, 
+    `comentarios`, `empresa`, `unidad`, `pais`, `horas`, `campana`, `costos`) VALUES ('$requerimiento','$tipo','$ubicacion','$formato',
     '$medidas','$duracion','$objetivo','$target','$look','$texto','$solicitante','$fechaSolicitud','$responsable','$avance','$fechaEntrega',
     '$links','$archivos','$comentarios','$empresa','$unidad','$pais','$horas','$nombreCampana','$costos')";
     $result = mysqli_query($conection, $sqlInsertar);
