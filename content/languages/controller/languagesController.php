@@ -151,7 +151,7 @@ function consultaPaisesAdmin($pais)
               
 
               <td>
-                <form action="editupper.php" method="POST">
+                <form action="editlanguages.php" method="POST">
                   <input name="id" value="<?php echo $auxLista["id"]; ?>" type="hidden" id="id">
                   <button class="btn btn-outline-secondary btn-sm mr-1" type="submit">
                     <span class="bi bi-pencil"></span>
