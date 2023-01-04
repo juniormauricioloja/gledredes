@@ -62,7 +62,7 @@ $id = $_POST["id"];
                             <?php
                             include "../../models/conection.php";
 
-                            $sqlBuscar = "SELECT * FROM dbcontenidoredesupper WHERE id=$id";
+                            $sqlBuscar = "SELECT * FROM dbcontenidoredesletstalk WHERE id=$id";
                             $query_rol = mysqli_query($conection, $sqlBuscar);
                             $result_rol = mysqli_num_rows($query_rol);
                             if ($result_rol > 0) {
