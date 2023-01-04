@@ -70,7 +70,7 @@ $path_so = "../../cabecera.php";
                                                     <select name="" id="pais" class="form-control from-control-lg">
                                                     <option value="">----Seleccione Pais----</option>
                                                        <?php
-                                                            include '../../model/conection.php';
+                                                            include '../../models/conection.php';
                                                             $sqlBuscar = "SELECT * FROM productscountry";
                                                             $query_rol = mysqli_query($conection, $sqlBuscar);
                                                             $result_rol=mysqli_num_rows($query_rol);
@@ -96,7 +96,7 @@ $path_so = "../../cabecera.php";
                                                     <select name="" id="empresa" class="form-control from-control-lg">
                                                         <option value="">----Seleccione la Empresa----</option>
                                                         <?php
-                                                            include '../../model/conection.php';
+                                                            include '../../models/conection.php';
                                                             $sqlBuscar = "SELECT * FROM `business`";
                                                             $query_rol = mysqli_query($conection, $sqlBuscar);
                                                             $result_rol=mysqli_num_rows($query_rol);
@@ -121,7 +121,7 @@ $path_so = "../../cabecera.php";
                                                     <select name="" id="unidad" class="form-control from-control-lg">
                                                         <option value="">----Seleccione la Unidad----</option>
                                                         <?php
-                                                            include '../../model/conection.php';
+                                                            include '../../models/conection.php';
                                                             $sqlBuscar = "SELECT * FROM `unidad_requ`";
                                                             $query_rol = mysqli_query($conection, $sqlBuscar);
                                                             $result_rol=mysqli_num_rows($query_rol);
@@ -149,7 +149,7 @@ $path_so = "../../cabecera.php";
                                                     <select name="" id="requerimiento" class="form-control from-control-lg">
                                                         <option value="">----Seleccione el Requerimiento----</option>
                                                         <?php
-                                                            include '../../model/conection.php';
+                                                            include '../../models/conection.php';
                                                             $sqlBuscar = "SELECT * FROM `requerimientos`";
                                                             $query_rol = mysqli_query($conection, $sqlBuscar);
                                                             $result_rol=mysqli_num_rows($query_rol);
@@ -171,7 +171,7 @@ $path_so = "../../cabecera.php";
                                                         <select name="" id="objetivo" class="form-control from-control-lg">
                                                             <option value="">----Seleccione el Objetivo----</option>
                                                             <?php
-                                                            include '../../model/conection.php';
+                                                            include '../../models/conection.php';
                                                             $sqlBuscar = "SELECT * FROM `objetivo_requ`";
                                                             $query_rol = mysqli_query($conection, $sqlBuscar);
                                                             $result_rol=mysqli_num_rows($query_rol);
@@ -193,7 +193,7 @@ $path_so = "../../cabecera.php";
                                                         <select name="" id="tipo" class="form-control from-control-lg">
                                                             <option value="">----Seleccione el Tipo----</option>
                                                             <?php
-                                                            include '../../model/conection.php';
+                                                            include '../../models/conection.php';
                                                             $sqlBuscar = "SELECT * FROM `tipo_requerimiento`";
                                                             $query_rol = mysqli_query($conection, $sqlBuscar);
                                                             $result_rol=mysqli_num_rows($query_rol);
@@ -215,7 +215,7 @@ $path_so = "../../cabecera.php";
                                                         <select name="" id="ubicacion" class="form-control from-control-lg">
                                                             <option value="">----Seleccione Ubicación----</option>
                                                             <?php
-                                                            include '../../model/conection.php';
+                                                            include '../../models/conection.php';
                                                             $sqlBuscar = "SELECT * FROM `ubicacion_req`";
                                                             $query_rol = mysqli_query($conection, $sqlBuscar);
                                                             $result_rol=mysqli_num_rows($query_rol);
@@ -295,7 +295,7 @@ $path_so = "../../cabecera.php";
                                                         <select name="" id="formato" class="form-control from-control-lg">
                                                             <option value="">----Seleccione el Formato----</option>
                                                             <?php
-                                                            include '../../model/conection.php';
+                                                            include '../../models/conection.php';
                                                             $sqlBuscar = "SELECT * FROM `formato_requ`";
                                                             $query_rol = mysqli_query($conection, $sqlBuscar);
                                                             $result_rol=mysqli_num_rows($query_rol);
