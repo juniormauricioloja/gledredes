@@ -60,7 +60,7 @@ if ($aux=="consultarPedido"){
         <thead>
 
             <tr>
-            <th ></th>
+            
           <th>Requerimiento</th>
           <th>Tipo</th>
           <th>Ubicación</th>
@@ -104,6 +104,7 @@ if ($aux=="consultarPedido"){
         <?php
           foreach ($listaPerfiles as $auxLista) {
             ?>
+          <!--  
           <th>
           <table>
                 <td>
@@ -118,7 +119,6 @@ if ($aux=="consultarPedido"){
                 <button class="btn btn-outline-secondary btn-sm mr-1" onclick="deletelead('<?php echo $auxLista['ID']; ?>');">
                 <form  action="viewclient.php" method="POST">
                 <input name="id" value="<?php echo $auxLista["ID"]; ?>" type="hidden" id="id" >
-                
                   <span class="bi bi-trash" ></span>
                 </button>
               </form>
@@ -131,16 +131,9 @@ if ($aux=="consultarPedido"){
                 </button>
               </form>
                 </td>
-
               </table>
-             
-                    
-        
-                    
-        
-            
-             
           </th>
+          -->
           
         <td><?php echo $auxLista["requerimiento"]; ?></td>
         <td><?php echo $auxLista["tipo"]; ?></td>
