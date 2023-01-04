@@ -165,6 +165,16 @@ if (isset($_SESSION['user'])) {
                 </a>
             </li>
 
+            <li class="menu-label">Pedidos</li>
+
+            <li>
+                <a href="/gledredes/content/pedidos/index.php">
+                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="menu-title">Pedidos MKT</div>
+                </a>
+            </li>
+
+
 
         </ul>
         <!--end navigation-->

@@ -1,0 +1,1 @@
+[11-Oct-2022 19:08:51 America/Guayaquil] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/grupocon/public_html/gled/contenido/pedidos/addpedidos.php on line 155
