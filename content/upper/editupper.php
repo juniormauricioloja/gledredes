@@ -87,7 +87,7 @@ $id = $_POST["id"];
                                         </div>
                                         
                                         <div class="col">
-                                            <label for="" class="form-control-label">Pais:</label>
+                                            <label for="" class="form-control-label">País:</label>
                                             <input id="pais" type="text" class="form-control from-control-lg" value="<?php echo $rol["pais"]; ?>" readonly>
                                         </div>
 
@@ -155,6 +155,10 @@ $id = $_POST["id"];
                                             <input id="compartir" type="number" class="form-control from-control-lg" value="<?php echo $rol["compartir"]; ?>" onkeypress="return filterFloat(event, this);" onkeyup="sumarPuntuacion();">
                                         </div>
                                         <div class="col">
+                                            <label for="exampleFormControlTextarea1">Comentarios:</label>
+                                            <input id="comentarios" type="number" class="form-control from-control-lg" value="" onkeypress="return filterFloat(event, this);" onkeyup="sumarPuntuacion();" readonly>
+                                        </div>
+                                        <div class="col">
                                             <label for="" class="form-control-label">Puntuación:</label>
                                             <input id="puntuacion" type="text" class="form-control from-control-lg" value="<?php echo $rol["puntuacion"]; ?>" onkeypress="return filterFloat(event, this);" onkeyup="sumarPuntuacion();" readonly>
                                         </div>
@@ -166,6 +170,13 @@ $id = $_POST["id"];
                                         <div class="col">
                                             <label for="exampleFormControlTextarea1">COPY POST:</label>
                                             <input id="post" type="text" class="form-control from-control-lg" value="<?php echo $rol["post"]; ?> " rows="2">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row mb-3">
+                                        <div class="col">
+                                            <label for="exampleFormControlTextarea1">Tópico:</label>
+                                            <input id="topico" type="text" class="form-control from-control-lg" value="<?php echo $rol["topico"]; ?> ">
                                         </div>
                                     </div>
 

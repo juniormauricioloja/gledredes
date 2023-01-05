@@ -515,6 +515,7 @@ if ($aux == "update") {
   $redsocial = $_POST["redsocial"];
   $post = $_POST["post"];
   $contenido = $_POST["contenido"];
+  $topico = $_POST["topico"];
   $linkblog = $_POST["linkblog"];
   $linkrrss = $_POST["linkrrss"];
   $linkweb = $_POST["linkweb"];
@@ -547,7 +548,7 @@ if ($aux == "update") {
     $arte,
     $comentario,
     $responsable,
-    $alcance,$megusta,$compartir,$puntuacion
+    $alcance,$megusta,$compartir,$puntuacion,$topico
   );
 
   echo $update;

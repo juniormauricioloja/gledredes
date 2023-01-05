@@ -50,14 +50,14 @@ function puntuacion($id,$alcance,$meGusta, $compartir , $puntuacion)
 }
 
 function update($id, $semana, $fecha, $objetivo, $herramienta, $colaboracion, $redsocial, $post, $contenido, $linkblog
-,$linkrrss, $linkweb, $linkform, $linkyoutube, $arte, $comentario, $responsable, $alcance, $megusta, $compartir, $puntuacion){
+,$linkrrss, $linkweb, $linkform, $linkyoutube, $arte, $comentario, $responsable, $alcance, $megusta, $compartir, $puntuacion,$topico){
 
     include "../../../models/conection.php";
     $sqlUpdate = "UPDATE `dbcontenidoredesenrollu` SET `semana`='$semana',`fecha`='$fecha',
     `objetivo`='$objetivo',`herramienta`='$herramienta',`colaboracion`='$colaboracion',`post`='$post',`contenido`='$contenido',
     `redsocial`='$redsocial',`linkblog`='$linkblog',`linkrrss`='$linkrrss',`linkweb`='$linkweb',`linkform`='$linkform',
     `linkyoutube`='$linkyoutube',`arte`='$arte',`comentario`='$comentario',`responsable`='$responsable' , `alcance`='$alcance', 
-    `megusta`='$megusta', `compartir`='$compartir', `puntuacion`='$puntuacion' WHERE `id` = '$id'";
+    `megusta`='$megusta', `compartir`='$compartir', `puntuacion`='$puntuacion' ,`topico`='$topico' WHERE `id` = '$id'";
     $result = mysqli_query($conection, $sqlUpdate);
     return $result;
 

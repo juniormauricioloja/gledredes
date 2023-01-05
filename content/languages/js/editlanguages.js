@@ -20,6 +20,7 @@ function update(){
     let puntuacion = document.getElementById("puntuacion").value;
 
     let contenido = document.getElementById("contenido").value;
+    let topico = document.getElementById("topico").value;
     let linkblog = document.getElementById("linkblog").value;
     let linkrrss = document.getElementById("linkrrss").value;
     let linkweb = document.getElementById("linkweb").value;
@@ -32,7 +33,7 @@ function update(){
     var cadena = "aux=update&id="+id+"&semana="+semana+"&fecha="+fecha+"&objetivo="+objetivo+"&herramienta="+herramienta+
     "&colaboracion="+colaboracion+"&redsocial="+redsocial+"&post="+post+"&contenido="+contenido+"&linkblog="+linkblog+"&linkrrss="+linkrrss+
     "&linkweb="+linkweb+"&linkform="+linkform+"&linkyoutube="+linkyoutube+"&arte="+arte+"&comentario="+comentario+"&responsable="+responsable+
-    "&alcance="+alcance+"&megusta="+megusta+"&compartir="+compartir+"&puntuacion="+puntuacion;
+    "&alcance="+alcance+"&megusta="+megusta+"&compartir="+compartir+"&puntuacion="+puntuacion+"&topico="+topico;
     $.ajax({
         type: "POST",
         url: "controller/languagesController.php",
