@@ -46,10 +46,7 @@ switch ($perfil) {
         <div class="viewlead">
             <main class="page-content">
                 <?php require_once $path_so; ?>
-                <br>
-                <br>
-
-                <div class="d-flex  justify-content-between align-items-center pt-3 pb-2 ">
+                <div class="d-flex justify-content-between align-items-center pt-3 pb-2 ">
 
                     <div class="mr-auto p-2">
                         <h2 class="h4">Contenido Redes Upper <?php echo $stringPais; ?></h2>
