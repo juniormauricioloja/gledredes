@@ -101,7 +101,7 @@ $id = $_POST["id"];
                                                 <?php
                                                             include '../../models/conection.php';
                                                             $objetivo = $rol["objetivo"];
-                                                            $sqlBuscar1 = "SELECT * FROM redes_objetivo";
+                                                            $sqlBuscar1 = "SELECT * FROM redes_objetivo WHERE `objetivo`<>'$objetivo'";
                                                             $query_rol1 = mysqli_query($conection, $sqlBuscar1);
                                                             $result_rol1=mysqli_num_rows($query_rol1);
                                                             if($result_rol1>0)
