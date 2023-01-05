@@ -130,12 +130,21 @@ function consultaPaisesAdmin($pais)
         <th>FECHA</th>
         <th>SEMANA</th>
         
+        <th>TOPICO</th>
         <th>OBJETIVO</th>
         <th>HERRAMIENTA</th>
-        <th>COLABORACIÓN</th>
+        <th>COLABORACION</th>
         <th>COPY POST</th>
         <th>CONTENIDO</th>
         <th>RED SOCIAL</th>
+        <th>LINK BLOG</th>
+        <th>LINK REDES SOCIALES</th>
+        <th>LINK WEB</th>
+        <th>LINK FORMULARIO</th>
+        <th>LINK YOUTUBE</th>
+        <th>ARTE</th>
+        <th>LOGOS</th>
+
         <th>COMENTARIO</th>
         <th>PUNTUACION</th>
         <th>RESPONSABLE</th>
