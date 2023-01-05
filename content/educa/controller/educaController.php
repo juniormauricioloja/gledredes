@@ -16,12 +16,22 @@ function consultaPaises($pais)
         <th>PAIS</th>
         <th>FECHA</th>
         <th>SEMANA</th>
+
+        <th>TOPICO</th>
         <th>OBJETIVO</th>
         <th>HERRAMIENTA</th>
-        <th>COLABORACIÓN</th>
+        <th>COLABORACION</th>
         <th>COPY POST</th>
         <th>CONTENIDO</th>
         <th>RED SOCIAL</th>
+        <th>LINK BLOG</th>
+        <th>LINK REDES SOCIALES</th>
+        <th>LINK WEB</th>
+        <th>LINK FORMULARIO</th>
+        <th>LINK YOUTUBE</th>
+        <th>ARTE</th>
+        <th>LOGOS</th>
+
         <th>COMENTARIO</th>
         <th>PUNTUACION</th>
         <th>RESPONSABLE</th>
@@ -77,12 +87,22 @@ function consultaPaises($pais)
           <td><?php echo $auxLista["pais"]; ?></td>
           <td><?php echo $auxLista["fecha"]; ?></td>
           <td><?php echo $auxLista["semana"]; ?></td>
+
+          <td><?php echo $auxLista["topico"]; ?></td>
           <td><?php echo $auxLista["objetivo"]; ?></td>
           <td><?php echo $auxLista["herramienta"]; ?></td>
           <td><?php echo $auxLista["colaboracion"]; ?></td>
           <td><?php echo $auxLista["post"]; ?></td>
           <td><?php echo $auxLista["contenido"]; ?></td>
           <td><?php echo $auxLista["redsocial"]; ?></td>
+          <td><?php echo $auxLista["linkblog"]; ?></td>
+          <td><?php echo $auxLista["linkrrss"]; ?></td>
+          <td><?php echo $auxLista["linkweb"]; ?></td>
+          <td><?php echo $auxLista["linkform"]; ?></td>
+          <td><?php echo $auxLista["youtube"]; ?></td>
+          <td><?php echo $auxLista["arte"]; ?></td>
+          <td><?php echo $auxLista["logos"]; ?></td>
+
           <td><?php echo $auxLista["comentario"]; ?></td>
           <td><?php echo $auxLista["puntuacion"]; ?></td>
           <td><?php echo $auxLista["responsable"]; ?></td>
@@ -111,12 +131,22 @@ function consultaPaisesAdmin($pais)
         <th>PAIS</th>
         <th>FECHA</th>
         <th>SEMANA</th>
+
+        <th>TOPICO</th>
         <th>OBJETIVO</th>
         <th>HERRAMIENTA</th>
-        <th>COLABORACIÓN</th>
+        <th>COLABORACION</th>
         <th>COPY POST</th>
         <th>CONTENIDO</th>
         <th>RED SOCIAL</th>
+        <th>LINK BLOG</th>
+        <th>LINK REDES SOCIALES</th>
+        <th>LINK WEB</th>
+        <th>LINK FORMULARIO</th>
+        <th>LINK YOUTUBE</th>
+        <th>ARTE</th>
+        <th>LOGOS</th>
+
         <th>COMENTARIO</th>
         <th>PUNTUACION</th>
         <th>RESPONSABLE</th>
