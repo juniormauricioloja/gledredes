@@ -71,7 +71,7 @@ $id = $_POST["id"];
 
 
                                     <div class="form-row mb-3">
-                                    <div class="col">
+                                        <div class="col">
                                             <label for="" class="form-control-label">Fecha:</label>
                                             <input id="fecha" type="date" class="form-control from-control-lg" value="<?php echo $rol["fecha"]; ?>">
                                         </div>
@@ -83,7 +83,7 @@ $id = $_POST["id"];
                                             <label for="" class="form-control-label" hidden>ID:</label>
                                             <input id="id" type="text" class="form-control from-control-lg" value="<?php echo $rol["id"]; ?>" hidden>
                                         </div>
-                                        
+
                                         <div class="col">
                                             <label for="" class="form-control-label">País:</label>
                                             <input id="pais" type="text" class="form-control from-control-lg" value="<?php echo $rol["pais"]; ?>" readonly>
@@ -97,10 +97,25 @@ $id = $_POST["id"];
 
                                             <select name="" id="objetivo" class="form-control from-control-lg">
                                                 <option value="<?php echo $rol["objetivo"]; ?> "><?php echo $rol["objetivo"]; ?></option>
-                                                <option value="Posicionamiento">Posicionamiento</option>
-                                                <option value="Captación Clientes">Captación Clientes</option>
-                                                <option value="Fidelizar Clientes">Fidelizar Clientes</option>
-                                                <option value="Incrementar Ventas">Incrementar Ventas</option>
+                                                <?php
+                                                include '../../models/conection.php';
+                                                $objetivo = $rol["objetivo"];
+                                                $sqlBuscar1 = "SELECT * FROM redes_objetivo WHERE `objetivo`<>'$objetivo'";
+                                                $query_rol1 = mysqli_query($conection, $sqlBuscar1);
+                                                $result_rol1 = mysqli_num_rows($query_rol1);
+                                                if ($result_rol1 > 0) {
+                                                    while ($rol1 = mysqli_fetch_array($query_rol1)) {
+
+
+
+                                                ?>
+                                                        <option value="<?php echo $rol1['objetivo'] ?>"><?php echo $rol1['objetivo'] ?></option>
+                                                <?php
+
+                                                    }
+                                                }
+
+                                                ?>
                                             </select>
 
                                         </div>
@@ -109,13 +124,22 @@ $id = $_POST["id"];
 
                                             <select name="" id="herramienta" class="form-control from-control-lg">
                                                 <option value="<?php echo $rol["herramienta"]; ?> "><?php echo $rol["herramienta"]; ?></option>
-                                                <option value="Imagen">Imagen</option>
-                                                <option value="Video">Video</option>
-                                                <option value="Carrusel">Carrusel</option>
-                                                <option value="Blog">Blog</option>
-                                                <option value="Conexión Youtube">Conexión Youtube</option>
-                                                <option value="Help con opciones">Help con opciones</option>
-                                                <option value="Reel">Reel</option>
+                                                <?php
+                                                include '../../models/conection.php';
+                                                $herramienta = $rol["herramienta"];
+                                                $sqlBuscar2 = "SELECT * FROM redes_herramientas WHERE `herramientas`<>'$herramienta'";
+                                                $query_rol2 = mysqli_query($conection, $sqlBuscar2);
+                                                $result_rol2 = mysqli_num_rows($query_rol2);
+                                                if ($result_rol2 > 0) {
+                                                    while ($rol2 = mysqli_fetch_array($query_rol2)) {
+                                                ?>
+                                                        <option value="<?php echo $rol2['herramientas'] ?>"><?php echo $rol2['herramientas'] ?></option>
+                                                <?php
+
+                                                    }
+                                                }
+
+                                                ?>
 
                                             </select>
                                         </div>
