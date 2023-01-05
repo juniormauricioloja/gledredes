@@ -139,7 +139,7 @@ $id = $_POST["id"];
 
                                                                     
                                                                 ?>
-                                                            <option value="<?php echo $rol2['herramienta'] ?>"><?php echo $rol2['herramienta'] ?></option>
+                                                            <option value="<?php echo $rol2['herramientas'] ?>"><?php echo $rol2['herramientas'] ?></option>
                                                         <?php
                                                                     
                                                                 }
