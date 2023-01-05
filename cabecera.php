@@ -111,56 +111,56 @@ if (isset($_SESSION['user'])) {
 
             <li>
                 <a href="/gledredes/content/upper/index.php">
-                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="parent-icon"><i class="bi bi-chevron-compact-right"></i></div>
                     <div class="menu-title">Upper</div>
                 </a>
             </li>
 
             <li>
                 <a href="/gledredes/content/hey/index.php">
-                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="parent-icon"><i class="bi bi-chevron-compact-right"></i></div>
                     <div class="menu-title">Hey</div>
                 </a>
             </li>
 
             <li>
                 <a href="/gledredes/content/languages/index.php">
-                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="parent-icon"><i class="bi bi-chevron-compact-right"></i></div>
                     <div class="menu-title">Languages</div>
                 </a>
             </li>
 
             <li>
                 <a href="/gledredes/content/gled/index.php">
-                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="parent-icon"><i class="bi bi-chevron-compact-right"></i></div>
                     <div class="menu-title">Gled</div>
                 </a>
             </li>
 
             <li>
                 <a href="/gledredes/content/educa/index.php">
-                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="parent-icon"><i class="bi bi-chevron-compact-right"></i></div>
                     <div class="menu-title">Educa</div>
                 </a>
             </li>
 
             <li>
                 <a href="/gledredes/content/letstalk/index.php">
-                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="parent-icon"><i class="bi bi-chevron-compact-right"></i></div>
                     <div class="menu-title">Let's Talk</div>
                 </a>
             </li>
 
             <li>
                 <a href="/gledredes/content/enrollu/index.php">
-                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="parent-icon"><i class="bi bi-chevron-compact-right"></i></div>
                     <div class="menu-title">Enroll U</div>
                 </a>
             </li>
 
             <li>
                 <a href="/gledredes/content/kaplan/index.php">
-                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="parent-icon"><i class="bi bi-chevron-compact-right"></i></div>
                     <div class="menu-title">Kaplan Medical</div>
                 </a>
             </li>
@@ -169,7 +169,7 @@ if (isset($_SESSION['user'])) {
 
             <li>
                 <a href="/gledredes/content/pedidos/index.php">
-                    <div class="parent-icon"><i class="bi bi-caret-right-fill"></i></div>
+                    <div class="parent-icon"><i class="bi bi-cart-check-fill"></i></div>
                     <div class="menu-title">Pedidos MKT</div>
                 </a>
             </li>
