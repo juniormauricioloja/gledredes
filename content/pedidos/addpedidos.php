@@ -354,14 +354,11 @@ $path_so = "../../cabecera.php";
                                                     <input type="text" id="links" class="form-control from-control-lg" >
                                                 </div>
 
-                                                <div class="col">     
-                                                    <label for="" class="form-control-label">Archivos</label>
-                                                    <input type="text" id="archivos" class="form-control from-control-lg input-number" >
-                                                </div>
+                                                <
 
                                                 <div class="col">     
                                                     <label for="" class="form-control-label">Comentarios</label>
-                                                    <input type="text" id="comentarios" class="form-control from-control-lg input-number" >
+                                                    <input type="text" id="comentarios" class="form-control from-control-lg " >
                                                 </div>
                                             </div>
 
